@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+
+    <!--  Link css files  -->
+    <link rel="stylesheet" href="styles/stylesheetFor-Header-Footer.css">
+    <link rel="stylesheet" href="styles/stylesheetFor-Top.css">
+
+    <!--  Icon  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round"
+          rel="stylesheet">
+
+    <!--  Google Fonts  -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">
+
+    <!--  Font Awesome  -->
+    <script src="https://kit.fontawesome.com/b4eaaa65fe.js" crossorigin="anonymous"></script>
+
+    <!--  Title  -->
+    <title>MaruWeb</title>
+
+    <!-- jQuery.jsの読み込み -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+    <!-- スムーズスクロール部分の記述 -->
+    <script>
+        $(function () {
+            // #で始まるアンカーをクリックした場合に処理
+            $('a[href^=#]').click(function () {
+                // スクロールの速度
+                const speed = 600; // ミリ秒
+                // アンカーの値取得
+                const href = $(this).attr("href");
+                // 移動先を取得
+                const target = $(href === "#" || href === "" ? 'html' : href);
+                // 移動先を数値で取得
+                const position = target.offset().top;
+                // スムーススクロール
+                $('body,html').animate({scrollTop: position}, speed, 'swing');
+                return false;
+            });
+        });
+    </script>
+
+</head>
+<body>
+
+<!-- Header -->
+<header id="topHeader">
+    <div class="headerItems">
+
+        <div class="headerItem index">
+            <a href="" class="borderLeftRight">Top</a>
+        </div>
+
+        <div class="headerItem index">
+            <a href="" class="borderLeftRight">Million Effort</a>
+        </div>
+
+        <div class="headerItem index">
+            <a href="" class="borderLeftRight">Weather</a>
+        </div>
+
+        <div class="headerItem index tools-index">
+            <label for="label-tools" class="borderLeftRight">Tools</label>
+            <input type="checkbox" id="label-tools"/>
+            <div class="tools-index-show">
+                <!--非表示ここから-->
+                <ul>
+                    <li>
+                        <a href="#">tools-test1</a>
+                    </li>
+                    <li>
+                        <a href="#">tools-test2</a>
+                    </li>
+                    <li>
+                        <a href="#">tools-test3</a>
+                    </li>
+                    <li>
+                        <a href="#">tools-test4</a>
+                    </li>
+                </ul>
+                <!--ここまで-->
+            </div>
+        </div>
+    </div>
+</header>
+
+<div id="title">
+    <h1 class="homepageName">
+        MaruWeb
+    </h1>
+    <p>
+        Since March 2021
+        <br>
+        Made by Yuma Takai
+    </p>
+</div>
+
+<!-- 上に表示 -->
+<div id="menu">
+    <h1>
+        Menu
+    </h1>
+
+    <div class="MenuItems">
+        <a href="#" class="MenuItem">
+            <span class="material-icons-round menu-icon menu-icon-cloud">
+                cloud
+            </span>
+            <h3 class="menu-title">
+                Cloud
+            </h3>
+        </a>
+        <a href="#" class="MenuItem">
+            <span class="material-icons-round menu-icon menu-icon-statistics">
+                assessment
+            </span>
+            <h3 class="menu-title">
+                Statistics
+            </h3>
+        </a>
+        <a href="#" class="MenuItem">
+            <span class="material-icons-round menu-icon menu-icon-university">
+                school
+            </span>
+            <h3 class="menu-title">
+                University
+            </h3>
+        </a>
+        <a href="#" class="MenuItem">
+            <span class="material-icons-round menu-icon menu-icon-books">
+                menu_book
+            </span>
+            <h3 class="menu-title">
+                Books
+            </h3>
+        </a>
+        <a href="#" class="MenuItem">
+            <span class="material-icons-round menu-icon menu-icon-camp">
+                local_fire_department
+            </span>
+            <h3 class="menu-title">
+                Camping
+            </h3>
+        </a>
+    </div>
+</div>
+
+<div id="split">
+    <!-- 左側 -->
+    <a href="#" id="forecast" class="dashboardItem">
+        <h2>
+            Weather
+        </h2>
+        <!-- 天気の表示 -->
+        <div class="weather-image">
+            <img src="./img/sun.svg" alt="sun">
+        </div>
+        <ul>
+            <li>
+                Max:
+            </li>
+            <li>
+                Min:
+            </li>
+            <li>
+                Rain:
+            </li>
+        </ul>
+    </a>
+
+    <!-- 右側 -->
+    <div id="tools">
+        <h1>
+            Tool Box
+        </h1>
+        <div class="ToolItems">
+
+            <!--     画像をアイコンにするパターン       -->
+            <a href="#" class="ToolItem">
+            <span class="material-icons-round tool-icon">
+                <img src="img/ringfit.png" alt="ringfit" class="tool-icon-ringfit">
+            </span>
+                <h3 class="tool-title">
+                    Ringfit
+                </h3>
+            </a>
+
+            <!--     Font Awesome や Google Fonts からアイコンをもらってくるパターン       -->
+            <a href="https://docs.google.com/spreadsheets/d/1b9uZVCDPsLLfcfsDZpeEeMRnr1GvbUPo2q4G4EH012o/edit#gid=0"
+               class="ToolItem" target="_blank" rel="noopener">
+            <span class="material-icons-round tool-icon tool-icon-millionEffort">
+                edit
+            </span>
+            <h3 class="tool-title">
+                Million Effort
+            </h3>
+            </a>
+
+            <a href="#" class="ToolItem">
+            <span class="material-icons-round tool-icon tool-icon-vacant">
+                emoji_emotions
+            </span>
+                <h3 class="tool-title">
+                    Coming Soon
+                </h3>
+            </a>
+
+            <a href="#" class="ToolItem">
+            <span class="material-icons-round tool-icon tool-icon-vacant">
+                emoji_emotions
+            </span>
+                <h3 class="tool-title">
+                    Coming Soon
+                </h3>
+            </a>
+
+            <a href="#" class="ToolItem">
+            <span class="material-icons-round tool-icon tool-icon-vacant">
+                emoji_emotions
+            </span>
+                <h3 class="tool-title">
+                    Coming Soon
+                </h3>
+            </a>
+
+            <a href="#" class="ToolItem">
+                <i class="fab fa-twitter tool-icon tool-icon-twitter"></i>
+                <h3 class="tool-title">
+                    Twitter API
+                </h3>
+            </a>
+
+            <a href="#" class="ToolItem">
+            <span class="material-icons-round tool-icon tool-icon-vacant">
+                emoji_emotions
+            </span>
+                <h3 class="tool-title">
+                    Coming Soon
+                </h3>
+            </a>
+
+            <a href="#" class="ToolItem">
+            <span class="material-icons-round tool-icon tool-icon-vacant">
+                emoji_emotions
+            </span>
+                <h3 class="tool-title">
+                    Coming Soon
+                </h3>
+            </a>
+
+            <a href="#" class="ToolItem">
+            <span class="material-icons-round tool-icon tool-icon-vacant">
+                emoji_emotions
+            </span>
+                <h3 class="tool-title">
+                    Coming Soon
+                </h3>
+            </a>
+
+            <a href="#" class="ToolItem">
+            <span class="material-icons-round tool-icon tool-icon-vacant">
+                emoji_emotions
+            </span>
+                <h3 class="tool-title">
+                    Coming Soon
+                </h3>
+            </a>
+        </div>
+
+    </div>
+</div>
+
+<!--  Footer  -->
+<footer id="topFooter" class="footer outer-block">
+    <ul class="nav">
+        <li>
+            <a href="https://twitter.com/_marufura_" target="_blank" rel="noopener">
+                <img src="./img/twitter.svg" alt="twitter-logo">
+                <br>
+                @_marufura_
+            </a>
+        </li>
+        <li>
+            <a href="https://github.com/marufura" target="_blank" rel="noopener">
+                <img src="./img/github.svg" alt="github-logo" width="30px">
+                <br>
+                marufura
+            </a>
+        </li>
+        <li>
+            <div>
+                <img src="./img/mail.svg" alt="mail-logo">
+                <br>
+                <u>tara.for.using.services@gmail.com</u>
+            </div>
+        </li>
+    </ul>
+    <div class="concept">
+        <a href="#title">ページの一番上に戻る</a>
+    </div>
+</footer>
+
+</body>
+</html>

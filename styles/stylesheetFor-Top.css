@@ -1,0 +1,182 @@
+@charset "UTF-8";
+body {
+  background: black;
+  margin: 0;
+}
+
+#title {
+  margin: -50px 0 20px;
+  padding: 50px 200px 20px;
+  text-decoration: none;
+  width: auto;
+  height: 200px;
+  background-color: rgba(0, 0, 0, 0.2);
+  background-image: url("../img/xwing.PNG");
+  background-position: 90% 30%;
+  background-size: 800px;
+  background-repeat: no-repeat;
+  border-bottom: white 4px double;
+  color: white;
+  font-family: "Zen Dots", cursive;
+  cursor: default;
+}
+#title h1 {
+  font-size: 50px;
+  margin-top: 40px;
+  margin-bottom: -10px;
+}
+#title p {
+  margin-left: 30px;
+  font-size: 20px;
+}
+
+/* Menu 部分 */
+#menu {
+  width: auto;
+  height: auto;
+  padding: 0 30px 10px;
+  margin: 10px 50px 20px;
+  font-family: "Zen Dots", cursive;
+}
+#menu h1 {
+  color: white;
+  font-size: 40px;
+  text-align: center;
+}
+#menu a {
+  display: flex;
+  color: white;
+  text-decoration: none;
+}
+#menu .MenuItems {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+#menu .MenuItem {
+  width: 15%;
+  height: auto;
+  margin: 0 1% 20px;
+  padding: 20px 0;
+  display: block;
+  border: 4px solid;
+  text-align: center;
+  transition: 0.75s;
+}
+#menu .MenuItem .menu-icon {
+  font-size: 150px;
+}
+#menu .MenuItem .menu-icon-cloud {
+  color: skyblue;
+}
+#menu .MenuItem .menu-icon-statistics {
+  color: palegoldenrod;
+}
+#menu .MenuItem .menu-icon-university {
+  color: #870015;
+}
+#menu .MenuItem .menu-icon-books {
+  color: greenyellow;
+}
+#menu .MenuItem .menu-icon-camp {
+  color: orange;
+}
+#menu .MenuItem .menu-title {
+  margin-top: -10px;
+  font-size: 20px;
+}
+#menu .MenuItem:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* dashboard と tools の親クラス: 左右に分割 */
+#split {
+  display: flex;
+  margin: 10px 50px;
+}
+
+/* 左側 */
+#forecast {
+  width: 25%;
+  padding: 0 30px 10px;
+  text-decoration: none;
+  border: white 4px solid;
+  color: white;
+  transition: 0.75s;
+  font-family: "Zen Dots", cursive;
+  display: block;
+}
+#forecast h2 {
+  text-align: center;
+  font-size: 40px;
+}
+#forecast .weather-image {
+  text-align: center;
+}
+#forecast img {
+  width: 50%;
+}
+#forecast li {
+  font-size: 20px;
+}
+
+#forecast:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* 右側 <- Menuとほぼ同じ */
+#tools {
+  width: 75%;
+  height: auto;
+  margin-left: 3%;
+  border: white 4px solid;
+  padding: 0 30px 10px;
+  font-family: "Zen Dots", cursive;
+}
+#tools h1 {
+  color: white;
+  font-size: 40px;
+  text-align: center;
+}
+#tools a {
+  display: flex;
+  color: white;
+  text-decoration: none;
+}
+#tools .ToolItems {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+#tools .ToolItem {
+  width: 15%;
+  margin: 0 1% 20px;
+  padding: 20px 0;
+  height: 150px;
+  display: block;
+  border: 4px solid;
+  text-align: center;
+  transition: 0.75s;
+}
+#tools .ToolItem .tool-icon {
+  font-size: 100px;
+}
+#tools .ToolItem .tool-icon-twitter {
+  color: #139ae9;
+}
+#tools .ToolItem .tool-icon-millionEffort {
+  color: green;
+}
+#tools .ToolItem .tool-icon-ringfit {
+  width: 57%;
+}
+#tools .ToolItem .tool-title {
+  font-size: 15px;
+}
+#tools .ToolItem:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/*# sourceMappingURL=stylesheetFor-Top.css.map */

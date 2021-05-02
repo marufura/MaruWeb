@@ -1,0 +1,275 @@
+/*
+  Header : 自作
+  Footer : ほぼ https://b-risk.jp/blog/2020/06/footer/ から
+*/
+
+@use "colorSetting";
+@use "environmentVariables";
+
+// Header
+header {
+
+  // Headerを固定する
+  position: sticky;
+  top: 0;
+
+  $headerHeight: 50px;
+  $logoHeight: 30px;
+  $logoPadding: ($headerHeight - $logoHeight)/2;
+  $indexPadding: $headerHeight/3;
+
+  height: $headerHeight;
+  background-color: colorSetting.$baseBackgroundColor;
+  text-align: center;
+  border-bottom: colorSetting.$baseTextColor 1px solid;
+
+  @media only screen and (min-width: 641px) {
+    padding-right: 20%;
+    padding-left: 20%;
+  }
+
+  @media only screen and (max-width: 640px) {
+    padding-right: 5%;
+    padding-left: 5%;
+  }
+
+
+  .headerItems {
+
+    // HeaderItemを横並びにする
+    display: flex;
+
+    a, .tools-index, .others-index, label{
+      display: block;
+      text-decoration: none;
+      color: colorSetting.$baseTextColor;
+    }
+
+    .index {
+      padding-top: $indexPadding;
+      padding-bottom: $indexPadding;
+    }
+
+    .index :hover{
+      color: colorSetting.$hoveredTextColor;
+    }
+
+    .headerItem {
+      flex: auto;
+      a{
+        transition: 0.75s;
+      }
+    }
+
+  }
+
+  .header-logo-img {
+    height: $logoHeight;
+    padding: $logoPadding;
+  }
+
+  .tools-index{
+
+    input{
+      display: none;
+    }
+
+    label{
+      cursor: pointer;
+    }
+
+    .tools-index-show {
+      height: 0;
+      padding: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: 0.8s;
+
+      // 表示されるサブメニューについて
+      ul {
+        list-style: none;
+        padding-left: 0;
+        background-color: colorSetting.$baseBackgroundColor;
+        border-radius: 30px;
+        z-index: 100;
+      }
+
+      // サブメニューの中身の部分について
+      li{
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+    }
+
+    /* クリック時の登場アニメーション */
+    input:checked ~ .tools-index-show {
+      height: auto;
+      opacity: 1;
+      animation: SlideIn 0.8s;
+    }
+
+    // アニメーションの詳細
+    @keyframes SlideIn {
+      0% {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  }
+}
+
+
+// Footer
+footer{
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+#topFooter {
+  position: relative;
+  background: colorSetting.$baseBackgroundColor;
+}
+
+#topFooter .logo {
+  text-align: center;
+  padding: 20px 0;
+  border-bottom: 1px solid colorSetting.$baseTextColor;
+}
+
+#topFooter .logo a {
+  display: inline-block;
+}
+
+#topFooter .logo img {
+  width: 100px;
+}
+
+#topFooter .nav a, #topFooter .nav p, #topFooter .nav u{
+  display: block;
+  padding: 0 10px;
+  color: colorSetting.$baseTextColor;
+}
+
+// twitter GitHub
+#topFooter .nav a {
+  text-align: center;
+  text-decoration: none;
+  transition: 0.75s;
+
+  img{
+    height: 30px;
+  }
+}
+#topFooter .nav a:hover {
+  color: colorSetting.$hoveredTextColor;
+}
+
+// mail用
+#topFooter .nav div {
+  text-align: center;
+  text-decoration: none;
+
+  img{
+    height: 30px;
+  }
+}
+
+#topFooter .nav u:hover {
+  color: colorSetting.$hoveredTextColor;
+  cursor: default;
+  transition: 0.75s;
+}
+
+@media only screen and (min-width: 641px) {
+  //PCのみ
+  #topFooter .nav {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding: 20px 0;
+  }
+
+  // nav の間隔
+  #topFooter .nav li{
+    padding-left: 1%;
+    padding-right: 1%;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  //SPのみ
+  #topFooter {
+    text-align: center;
+  }
+
+  #topFooter .nav li {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  #topFooter .nav li a {
+    padding: 12px 20px;
+  }
+}
+
+// footer ページ上部へ
+.concept{
+
+  text-align: center;
+  padding-bottom: 20px;
+
+  a {
+    font-size: 20px;
+    color: colorSetting.$baseTextColor;
+    top: 130px;
+    left: 50%;
+    z-index: 1;
+    transition: 0.75s;
+  }
+
+  a:hover{
+    color: colorSetting.$hoveredTextColor;
+  }
+}
+
+
+// 下線がゆるりと出てくるAnimation class="borderLeftRight" を追加して実装
+.borderLeftRight {
+  display: inline-block;
+  position: relative;
+}
+
+.borderLeftRight::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: colorSetting.$hoveredTextColor;
+  transform-origin: bottom right;
+  transition: transform 0.75s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.borderLeftRight:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
