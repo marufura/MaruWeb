@@ -42,6 +42,7 @@ body {
   color: white;
   font-size: 40px;
   text-align: center;
+  cursor: default;
 }
 #menu a {
   display: flex;
@@ -168,6 +169,12 @@ body {
 }
 #tools .ToolItem .tool-icon-millionEffort {
   color: green;
+}
+#tools .ToolItem .tool-icon-airtable {
+  color: lightcyan;
+}
+#tools .ToolItem .tool-icon-pory {
+  color: white;
 }
 #tools .ToolItem .tool-icon-ringfit {
   width: 57%;

@@ -53,6 +53,7 @@ body {
     color: environmentVariables.$mainStringColor;
     font-size: 40px;
     text-align: center;
+    cursor: default;
   }
 
   a {
@@ -213,6 +214,12 @@ body {
     }
     .tool-icon-millionEffort{
       color: green;
+    }
+    .tool-icon-airtable{
+      color: lightcyan;
+    }
+    .tool-icon-pory{
+      color: white;
     }
 
     // 画像をアイコンとして使う場合 -> widthでサイズ調整(57%が良いかんじ？)

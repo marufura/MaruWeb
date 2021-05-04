@@ -10,6 +10,7 @@ header {
   background-color: rgba(0, 0, 0, 0.8);
   text-align: center;
   border-bottom: rgba(255, 255, 255, 0.7) 1px solid;
+  font-family: "Itim", cursive;
 }
 @media only screen and (min-width: 641px) {
   header {
@@ -91,6 +92,9 @@ header .tools-index input:checked ~ .tools-index-show {
   }
 }
 
+footer {
+  font-family: "Itim", cursive;
+}
 footer ul {
   list-style: none;
   margin: 0;
