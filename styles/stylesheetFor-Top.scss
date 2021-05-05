@@ -96,8 +96,8 @@ body {
       color: palegoldenrod;
     }
 
-    .menu-icon-university {
-      color: rgb(135, 0, 21);
+    .menu-icon-description {
+      color: lightcoral;
     }
 
     .menu-icon-books {
@@ -119,14 +119,14 @@ body {
   }
 }
 
-/* dashboard と tools の親クラス: 左右に分割 */
+/* news と tools の親クラス: 左右に分割 */
 #split {
   display: flex;
   margin: 10px environmentVariables.$pageSideMargin;
 }
 
 /* 左側 */
-#forecast {
+#news {
   width: 25%;
   padding: 0 30px 10px;
 
@@ -135,31 +135,26 @@ body {
   color: environmentVariables.$mainStringColor;
   transition: 0.75s;
 
-  font-family: 'Zen Dots', cursive;
+  .wf-notosansjapanese { font-family: "Noto Sans JP"; }
+  cursor: default;
 
-  display: block;
-
-  h2 {
+  h1 {
+    font-family: 'Zen Dots', cursive;
     text-align: center;
     font-size: 40px;
+    border-bottom: environmentVariables.$mainStringColor environmentVariables.$borderWidth solid;
   }
 
-  .weather-image {
-    text-align: center;
+  .news-content{
+    margin-top: -10px;
+    width: 100%;
+    height: 70%;
+    border: black;
   }
 
-  img {
-    width: 50%;
+  p{
+    text-align: end;
   }
-
-  li {
-    font-size: 20px;
-  }
-
-}
-
-#forecast:hover {
-  background-color: environmentVariables.$mainStringColor-transparent;
 }
 
 
@@ -176,6 +171,7 @@ body {
     color: environmentVariables.$mainStringColor;
     font-size: 40px;
     text-align: center;
+    border-bottom: environmentVariables.$mainStringColor environmentVariables.$borderWidth solid;
   }
 
   a {

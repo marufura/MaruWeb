@@ -1,0 +1,12 @@
+body {
+  margin-top: 0;
+  background-color: black;
+}
+
+.news-item {
+  font-family: "Noto Sans JP";
+  color: white;
+  border-bottom: white 1px solid;
+}
+
+/*# sourceMappingURL=stylesheetFor-News.css.map */

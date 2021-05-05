@@ -74,8 +74,8 @@ body {
 #menu .MenuItem .menu-icon-statistics {
   color: palegoldenrod;
 }
-#menu .MenuItem .menu-icon-university {
-  color: #870015;
+#menu .MenuItem .menu-icon-description {
+  color: lightcoral;
 }
 #menu .MenuItem .menu-icon-books {
   color: greenyellow;
@@ -91,39 +91,39 @@ body {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
-/* dashboard と tools の親クラス: 左右に分割 */
+/* news と tools の親クラス: 左右に分割 */
 #split {
   display: flex;
   margin: 10px 50px;
 }
 
 /* 左側 */
-#forecast {
+#news {
   width: 25%;
   padding: 0 30px 10px;
   text-decoration: none;
   border: white 4px solid;
   color: white;
   transition: 0.75s;
-  font-family: "Zen Dots", cursive;
-  display: block;
+  cursor: default;
 }
-#forecast h2 {
+#news .wf-notosansjapanese {
+  font-family: "Noto Sans JP";
+}
+#news h1 {
+  font-family: "Zen Dots", cursive;
   text-align: center;
   font-size: 40px;
+  border-bottom: white 4px solid;
 }
-#forecast .weather-image {
-  text-align: center;
+#news .news-content {
+  margin-top: -10px;
+  width: 100%;
+  height: 70%;
+  border: black;
 }
-#forecast img {
-  width: 50%;
-}
-#forecast li {
-  font-size: 20px;
-}
-
-#forecast:hover {
-  background-color: rgba(255, 255, 255, 0.2);
+#news p {
+  text-align: end;
 }
 
 /* 右側 <- Menuとほぼ同じ */
@@ -139,6 +139,7 @@ body {
   color: white;
   font-size: 40px;
   text-align: center;
+  border-bottom: white 4px solid;
 }
 #tools a {
   display: flex;
