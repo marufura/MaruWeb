@@ -70,7 +70,7 @@ body {
   }
 
   .MenuItem {
-    width: 15%;
+    width: 12.5%;
     height: auto;
 
     margin: 0 1% 20px;
@@ -85,15 +85,11 @@ body {
     transition: 0.75s;
 
     .menu-icon {
-      font-size: 150px;
+      font-size: 700%;
     }
 
     .menu-icon-cloud {
       color: skyblue;
-    }
-
-    .menu-icon-statistics {
-      color: palegoldenrod;
     }
 
     .menu-icon-description {
@@ -135,7 +131,10 @@ body {
   color: environmentVariables.$mainStringColor;
   transition: 0.75s;
 
-  .wf-notosansjapanese { font-family: "Noto Sans JP"; }
+  .wf-notosansjapanese {
+    font-family: "Noto Sans JP";
+  }
+
   cursor: default;
 
   h1 {
@@ -145,14 +144,14 @@ body {
     border-bottom: environmentVariables.$mainStringColor environmentVariables.$borderWidth solid;
   }
 
-  .news-content{
+  .news-content {
     margin-top: -10px;
     width: 100%;
     height: 70%;
     border: black;
   }
 
-  p{
+  p {
     text-align: end;
   }
 }
@@ -201,26 +200,30 @@ body {
     transition: 0.75s;
 
     .tool-icon {
-      font-size: 100px;
+      font-size: 600%;
+      height: 70%;
     }
 
     // Google Fonts や Font Awesome を使う場合 -> Colorだけ選択すればよい
     .tool-icon-twitter {
       color: rgb(19, 154, 233);
     }
-    .tool-icon-millionEffort{
+
+    .tool-icon-millionEffort {
       color: green;
     }
-    .tool-icon-airtable{
+
+    .tool-icon-airtable {
       color: lightcyan;
     }
-    .tool-icon-pory{
+
+    .tool-icon-pory {
       color: white;
     }
 
     // 画像をアイコンとして使う場合 -> widthでサイズ調整(57%が良いかんじ？)
-    .tool-icon-ringfit{
-      width: 57%;
+    .tool-icon-ringfit {
+      height: 100%;
     }
 
     .tool-title {

@@ -15,8 +15,8 @@ body {
   background-position: 90% 30%;
   background-size: 800px;
   background-repeat: no-repeat;
-  border-bottom: white 4px double;
-  color: white;
+  border-bottom: rgba(255, 255, 255, 0.9) 4px double;
+  color: rgba(255, 255, 255, 0.9);
   font-family: "Zen Dots", cursive;
   cursor: default;
 }
@@ -39,14 +39,14 @@ body {
   font-family: "Zen Dots", cursive;
 }
 #menu h1 {
-  color: white;
+  color: rgba(255, 255, 255, 0.9);
   font-size: 40px;
   text-align: center;
   cursor: default;
 }
 #menu a {
   display: flex;
-  color: white;
+  color: rgba(255, 255, 255, 0.9);
   text-decoration: none;
 }
 #menu .MenuItems {
@@ -56,7 +56,7 @@ body {
   align-items: center;
 }
 #menu .MenuItem {
-  width: 15%;
+  width: 12.5%;
   height: auto;
   margin: 0 1% 20px;
   padding: 20px 0;
@@ -66,13 +66,10 @@ body {
   transition: 0.75s;
 }
 #menu .MenuItem .menu-icon {
-  font-size: 150px;
+  font-size: 700%;
 }
 #menu .MenuItem .menu-icon-cloud {
   color: skyblue;
-}
-#menu .MenuItem .menu-icon-statistics {
-  color: palegoldenrod;
 }
 #menu .MenuItem .menu-icon-description {
   color: lightcoral;
@@ -102,8 +99,8 @@ body {
   width: 25%;
   padding: 0 30px 10px;
   text-decoration: none;
-  border: white 4px solid;
-  color: white;
+  border: rgba(255, 255, 255, 0.9) 4px solid;
+  color: rgba(255, 255, 255, 0.9);
   transition: 0.75s;
   cursor: default;
 }
@@ -114,7 +111,7 @@ body {
   font-family: "Zen Dots", cursive;
   text-align: center;
   font-size: 40px;
-  border-bottom: white 4px solid;
+  border-bottom: rgba(255, 255, 255, 0.9) 4px solid;
 }
 #news .news-content {
   margin-top: -10px;
@@ -131,19 +128,19 @@ body {
   width: 75%;
   height: auto;
   margin-left: 3%;
-  border: white 4px solid;
+  border: rgba(255, 255, 255, 0.9) 4px solid;
   padding: 0 30px 10px;
   font-family: "Zen Dots", cursive;
 }
 #tools h1 {
-  color: white;
+  color: rgba(255, 255, 255, 0.9);
   font-size: 40px;
   text-align: center;
-  border-bottom: white 4px solid;
+  border-bottom: rgba(255, 255, 255, 0.9) 4px solid;
 }
 #tools a {
   display: flex;
-  color: white;
+  color: rgba(255, 255, 255, 0.9);
   text-decoration: none;
 }
 #tools .ToolItems {
@@ -163,7 +160,8 @@ body {
   transition: 0.75s;
 }
 #tools .ToolItem .tool-icon {
-  font-size: 100px;
+  font-size: 600%;
+  height: 70%;
 }
 #tools .ToolItem .tool-icon-twitter {
   color: #139ae9;
@@ -178,7 +176,7 @@ body {
   color: white;
 }
 #tools .ToolItem .tool-icon-ringfit {
-  width: 57%;
+  height: 100%;
 }
 #tools .ToolItem .tool-title {
   font-size: 15px;

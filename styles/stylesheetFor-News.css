@@ -6,7 +6,7 @@ body {
 .news-item {
   font-family: "Noto Sans JP";
   color: white;
-  border-bottom: white 1px solid;
+  border-bottom: rgba(255, 255, 255, 0.9) 1px solid;
 }
 
 /*# sourceMappingURL=stylesheetFor-News.css.map */
