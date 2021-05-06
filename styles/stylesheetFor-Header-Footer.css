@@ -3,95 +3,107 @@
   Header : 自作
   Footer : ほぼ https://b-risk.jp/blog/2020/06/footer/ から
 */
-header {
-  position: sticky;
-  top: 0;
-  height: 50px;
-  background-color: rgba(0, 0, 0, 0.8);
-  text-align: center;
-  border-bottom: rgba(255, 255, 255, 0.7) 1px solid;
-  font-family: "Itim", cursive;
+@media only screen and (min-width: 991px) {
+  header {
+    position: sticky;
+    top: 0;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.8);
+    text-align: center;
+    border-bottom: rgba(255, 255, 255, 0.7) 1px solid;
+    font-family: "Itim", cursive;
+  }
 }
-@media only screen and (min-width: 641px) {
+@media only screen and (min-width: 991px) and (min-width: 641px) {
   header {
     padding-right: 20%;
     padding-left: 20%;
   }
 }
-@media only screen and (max-width: 640px) {
+@media only screen and (min-width: 991px) and (max-width: 640px) {
   header {
     padding-right: 5%;
     padding-left: 5%;
   }
 }
-header .headerItems {
-  display: flex;
+@media only screen and (min-width: 991px) {
+  header .headerItems {
+    display: flex;
+  }
+  header .headerItems a, header .headerItems .tools-index, header .headerItems .others-index, header .headerItems label {
+    display: block;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.7);
+  }
+  header .headerItems .index {
+    padding-top: 16.6666666667px;
+    padding-bottom: 16.6666666667px;
+  }
+  header .headerItems .index :hover {
+    color: white;
+  }
+  header .headerItems .headerItem {
+    flex: auto;
+  }
+  header .headerItems .headerItem a {
+    transition: 0.75s;
+  }
 }
-header .headerItems a, header .headerItems .tools-index, header .headerItems .others-index, header .headerItems label {
-  display: block;
-  text-decoration: none;
-  color: rgba(255, 255, 255, 0.7);
+@media only screen and (min-width: 991px) {
+  header .header-logo-img {
+    height: 30px;
+    padding: 10px;
+  }
 }
-header .headerItems .index {
-  padding-top: 16.6666666667px;
-  padding-bottom: 16.6666666667px;
-}
-header .headerItems .index :hover {
-  color: white;
-}
-header .headerItems .headerItem {
-  flex: auto;
-}
-header .headerItems .headerItem a {
-  transition: 0.75s;
-}
-header .header-logo-img {
-  height: 30px;
-  padding: 10px;
-}
-header .tools-index {
-  /* クリック時の登場アニメーション */
-}
-header .tools-index input {
-  display: none;
-}
-header .tools-index label {
-  cursor: pointer;
-}
-header .tools-index .tools-index-show {
-  height: 0;
-  padding: 0;
-  overflow: hidden;
-  opacity: 0;
-  transition: 0.8s;
-}
-header .tools-index .tools-index-show ul {
-  list-style: none;
-  padding-left: 0;
-  background-color: rgba(0, 0, 0, 0.8);
-  border-radius: 30px;
-  z-index: 100;
-}
-header .tools-index .tools-index-show li {
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-header .tools-index input:checked ~ .tools-index-show {
-  height: auto;
-  opacity: 1;
-  animation: SlideIn 0.8s;
-}
-@keyframes SlideIn {
-  0% {
+@media only screen and (min-width: 991px) {
+  header .tools-index {
+    /* クリック時の登場アニメーション */
+  }
+  header .tools-index input {
+    display: none;
+  }
+  header .tools-index label {
+    cursor: pointer;
+  }
+  header .tools-index .tools-index-show {
+    height: 0;
+    padding: 0;
+    overflow: hidden;
     opacity: 0;
-    transform: translateY(-20px);
+    transition: 0.8s;
   }
-  100% {
+  header .tools-index .tools-index-show ul {
+    list-style: none;
+    padding-left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 30px;
+    z-index: 100;
+  }
+  header .tools-index .tools-index-show li {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  header .tools-index input:checked ~ .tools-index-show {
+    height: auto;
     opacity: 1;
-    transform: translateY(0);
+    animation: SlideIn 0.8s;
+  }
+  @keyframes SlideIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 }
-
+@media only screen and (max-width: 990px) {
+  header {
+    display: none;
+  }
+}
 footer {
   font-family: "Itim", cursive;
 }
@@ -153,7 +165,7 @@ footer ul {
   transition: 0.75s;
 }
 
-@media only screen and (min-width: 641px) {
+@media only screen and (min-width: 991px) {
   #topFooter .nav {
     display: -webkit-box;
     display: -webkit-flex;
@@ -175,7 +187,7 @@ footer ul {
     padding-right: 1%;
   }
 }
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 990px) {
   #topFooter {
     text-align: center;
   }

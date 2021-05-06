@@ -3,127 +3,136 @@
   Footer : ほぼ https://b-risk.jp/blog/2020/06/footer/ から
 */
 
-@use "colorSetting";
+@use "colorSetting-header-footer";
 @use "environmentVariables";
 
-// Header
-header {
+// Header PC ならば表示する
+@media only screen and (min-width: environmentVariables.$breakpointOf-PC) {
+  header {
 
-  // Headerを固定する
-  position: sticky;
-  top: 0;
+    // Headerを固定する
+    position: sticky;
+    top: 0;
 
-  $headerHeight: 50px;
-  $logoHeight: 30px;
-  $logoPadding: ($headerHeight - $logoHeight)/2;
-  $indexPadding: $headerHeight/3;
+    $headerHeight: 50px;
+    $logoHeight: 30px;
+    $logoPadding: ($headerHeight - $logoHeight)/2;
+    $indexPadding: $headerHeight/3;
 
-  height: $headerHeight;
-  background-color: colorSetting.$baseBackgroundColor;
-  text-align: center;
-  border-bottom: colorSetting.$baseTextColor 1px solid;
+    height: $headerHeight;
+    background-color: colorSetting-header-footer.$baseBackgroundColor;
+    text-align: center;
+    border-bottom: colorSetting-header-footer.$baseTextColor 1px solid;
 
-  font-family: 'Itim', cursive;
+    font-family: 'Itim', cursive;
 
-  @media only screen and (min-width: 641px) {
-    padding-right: 20%;
-    padding-left: 20%;
-  }
-
-  @media only screen and (max-width: 640px) {
-    padding-right: 5%;
-    padding-left: 5%;
-  }
-
-
-  .headerItems {
-
-    // HeaderItemを横並びにする
-    display: flex;
-
-    a, .tools-index, .others-index, label{
-      display: block;
-      text-decoration: none;
-      color: colorSetting.$baseTextColor;
+    @media only screen and (min-width: 641px) {
+      padding-right: 20%;
+      padding-left: 20%;
     }
 
-    .index {
-      padding-top: $indexPadding;
-      padding-bottom: $indexPadding;
+    @media only screen and (max-width: 640px) {
+      padding-right: 5%;
+      padding-left: 5%;
     }
 
-    .index :hover{
-      color: colorSetting.$hoveredTextColor;
-    }
 
-    .headerItem {
-      flex: auto;
-      a{
-        transition: 0.75s;
-      }
-    }
+    .headerItems {
 
-  }
+      // HeaderItemを横並びにする
+      display: flex;
 
-  .header-logo-img {
-    height: $logoHeight;
-    padding: $logoPadding;
-  }
-
-  .tools-index{
-
-    input{
-      display: none;
-    }
-
-    label{
-      cursor: pointer;
-    }
-
-    .tools-index-show {
-      height: 0;
-      padding: 0;
-      overflow: hidden;
-      opacity: 0;
-      transition: 0.8s;
-
-      // 表示されるサブメニューについて
-      ul {
-        list-style: none;
-        padding-left: 0;
-        background-color: colorSetting.$baseBackgroundColor;
-        border-radius: 30px;
-        z-index: 100;
+      a, .tools-index, .others-index, label {
+        display: block;
+        text-decoration: none;
+        color: colorSetting-header-footer.$baseTextColor;
       }
 
-      // サブメニューの中身の部分について
-      li{
-        padding-top: 10px;
-        padding-bottom: 10px;
+      .index {
+        padding-top: $indexPadding;
+        padding-bottom: $indexPadding;
       }
+
+      .index :hover {
+        color: colorSetting-header-footer.$hoveredTextColor;
+      }
+
+      .headerItem {
+        flex: auto;
+
+        a {
+          transition: 0.75s;
+        }
+      }
+
     }
 
-    /* クリック時の登場アニメーション */
-    input:checked ~ .tools-index-show {
-      height: auto;
-      opacity: 1;
-      animation: SlideIn 0.8s;
+    .header-logo-img {
+      height: $logoHeight;
+      padding: $logoPadding;
     }
 
-    // アニメーションの詳細
-    @keyframes SlideIn {
-      0% {
+    .tools-index {
+
+      input {
+        display: none;
+      }
+
+      label {
+        cursor: pointer;
+      }
+
+      .tools-index-show {
+        height: 0;
+        padding: 0;
+        overflow: hidden;
         opacity: 0;
-        transform: translateY(-20px);
+        transition: 0.8s;
+
+        // 表示されるサブメニューについて
+        ul {
+          list-style: none;
+          padding-left: 0;
+          background-color: colorSetting-header-footer.$baseBackgroundColor;
+          border-radius: 30px;
+          z-index: 100;
+        }
+
+        // サブメニューの中身の部分について
+        li {
+          padding-top: 10px;
+          padding-bottom: 10px;
+        }
       }
-      100% {
+
+      /* クリック時の登場アニメーション */
+      input:checked ~ .tools-index-show {
+        height: auto;
         opacity: 1;
-        transform: translateY(0);
+        animation: SlideIn 0.8s;
+      }
+
+      // アニメーションの詳細
+      @keyframes SlideIn {
+        0% {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
       }
     }
   }
 }
 
+// Header SF ならば表示しない
+@media only screen and (max-width: environmentVariables.$breakpointOf-SF){
+  header{
+    display: none;
+  }
+}
 
 // Footer
 footer{
@@ -137,13 +146,13 @@ footer{
 
 #topFooter {
   position: relative;
-  background: colorSetting.$baseBackgroundColor;
+  background: colorSetting-header-footer.$baseBackgroundColor;
 }
 
 #topFooter .logo {
   text-align: center;
   padding: 20px 0;
-  border-bottom: 1px solid colorSetting.$baseTextColor;
+  border-bottom: 1px solid colorSetting-header-footer.$baseTextColor;
 }
 
 #topFooter .logo a {
@@ -157,7 +166,7 @@ footer{
 #topFooter .nav a, #topFooter .nav p, #topFooter .nav u{
   display: block;
   padding: 0 10px;
-  color: colorSetting.$baseTextColor;
+  color: colorSetting-header-footer.$baseTextColor;
 }
 
 // twitter GitHub
@@ -171,7 +180,7 @@ footer{
   }
 }
 #topFooter .nav a:hover {
-  color: colorSetting.$hoveredTextColor;
+  color: colorSetting-header-footer.$hoveredTextColor;
 }
 
 // mail用
@@ -185,12 +194,13 @@ footer{
 }
 
 #topFooter .nav u:hover {
-  color: colorSetting.$hoveredTextColor;
+  color: colorSetting-header-footer.$hoveredTextColor;
   cursor: default;
   transition: 0.75s;
 }
 
-@media only screen and (min-width: 641px) {
+// Footer PC ならば横向き表示
+@media only screen and (min-width: environmentVariables.$breakpointOf-PC) {
   //PCのみ
   #topFooter .nav {
     display: -webkit-box;
@@ -215,7 +225,8 @@ footer{
   }
 }
 
-@media only screen and (max-width: 640px) {
+// Footer PC ならば縦向き表示
+@media only screen and (max-width: environmentVariables.$breakpointOf-SF) {
   //SPのみ
   #topFooter {
     text-align: center;
@@ -240,7 +251,7 @@ footer{
 
   a {
     font-size: 20px;
-    color: colorSetting.$baseTextColor;
+    color: colorSetting-header-footer.$baseTextColor;
     top: 130px;
     left: 50%;
     z-index: 1;
@@ -248,7 +259,7 @@ footer{
   }
 
   a:hover{
-    color: colorSetting.$hoveredTextColor;
+    color: colorSetting-header-footer.$hoveredTextColor;
   }
 }
 
@@ -267,7 +278,7 @@ footer{
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: colorSetting.$hoveredTextColor;
+  background-color: colorSetting-header-footer.$hoveredTextColor;
   transform-origin: bottom right;
   transition: transform 0.75s cubic-bezier(0.86, 0, 0.07, 1);
 }
