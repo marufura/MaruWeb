@@ -196,26 +196,25 @@
     padding: 0 50px;
     text-decoration: none;
     width: auto;
-    height: 200px;
-    background-color: rgba(0, 0, 0, 0.2);
+    height: 300px;
     background-image: url("../img/xwing.PNG");
-    background-position: 100% 30%;
+    background-position: 150% 30%;
     background-size: 800px;
     background-repeat: no-repeat;
-    border-bottom: rgba(255, 255, 255, 0.9) 4px solid;
+    border-bottom: rgba(255, 255, 255, 0.9) 1px solid;
     color: rgba(255, 255, 255, 0.9);
     font-family: "Zen Dots", cursive;
     cursor: default;
   }
   #title h1 {
-    font-size: 50px;
-    padding-top: 50px;
+    font-size: 75px;
+    padding-top: 75px;
     margin-top: 0;
     margin-bottom: -10px;
   }
   #title p {
     margin-left: 30px;
-    font-size: 20px;
+    font-size: 30px;
   }
 
   /* Menu 部分 */
