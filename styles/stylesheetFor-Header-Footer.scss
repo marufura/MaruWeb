@@ -128,7 +128,7 @@
 }
 
 // Header SF ならば表示しない
-@media only screen and (max-width: environmentVariables.$breakpointOf-SF){
+@media only screen and (max-width: environmentVariables.$breakpointOf-SP){
   header{
     display: none;
   }
@@ -169,30 +169,6 @@ footer{
   color: colorSetting-header-footer.$baseTextColor;
 }
 
-// twitter GitHub
-#topFooter .nav a {
-  text-align: center;
-  text-decoration: none;
-  transition: 0.75s;
-
-  img{
-    height: 30px;
-  }
-}
-#topFooter .nav a:hover {
-  color: colorSetting-header-footer.$hoveredTextColor;
-}
-
-// mail用
-#topFooter .nav div {
-  text-align: center;
-  text-decoration: none;
-
-  img{
-    height: 30px;
-  }
-}
-
 #topFooter .nav u:hover {
   color: colorSetting-header-footer.$hoveredTextColor;
   cursor: default;
@@ -223,23 +199,74 @@ footer{
     padding-left: 1%;
     padding-right: 1%;
   }
+
+  // twitter GitHub
+  #topFooter .nav a {
+    text-align: center;
+    text-decoration: none;
+    transition: 0.75s;
+
+    img{
+      height: 30px;
+    }
+  }
+  #topFooter .nav a:hover {
+    color: colorSetting-header-footer.$hoveredTextColor;
+  }
+
+  // mail用
+  #topFooter .nav div {
+    text-align: center;
+    text-decoration: none;
+
+    img{
+      height: 30px;
+    }
+  }
 }
 
-// Footer PC ならば縦向き表示
-@media only screen and (max-width: environmentVariables.$breakpointOf-SF) {
+// Footer SP ならば縦向き表示
+@media only screen and (max-width: environmentVariables.$breakpointOf-SP) {
   //SPのみ
   #topFooter {
     text-align: center;
+    border-top: environmentVariables.$mainStringColor environmentVariables.$borderWidth-thin solid;
   }
 
   #topFooter .nav li {
     margin-top: 20px;
     margin-bottom: 20px;
     text-align: center;
+    font-size: 35px;
   }
 
   #topFooter .nav li a {
     padding: 12px 20px;
+  }
+
+  // twitter GitHub
+  #topFooter .nav li a {
+    text-align: center;
+    text-decoration: none;
+    transition: 0.75s;
+
+    img{
+      width: 90px;
+      height: 90px;
+    }
+  }
+  #topFooter .nav a:hover {
+    color: colorSetting-header-footer.$hoveredTextColor;
+  }
+
+  // mail用
+  #topFooter .nav li div {
+    text-align: center;
+    text-decoration: none;
+
+    img{
+      height: 90px;
+    }
   }
 }
 
@@ -248,9 +275,10 @@ footer{
 
   text-align: center;
   padding-bottom: 20px;
+  margin-top: 50px;
 
   a {
-    font-size: 20px;
+    font-size: 25px;
     color: colorSetting-header-footer.$baseTextColor;
     top: 130px;
     left: 50%;
@@ -262,7 +290,6 @@ footer{
     color: colorSetting-header-footer.$hoveredTextColor;
   }
 }
-
 
 // 下線がゆるりと出てくるAnimation class="borderLeftRight" を追加して実装
 .borderLeftRight {

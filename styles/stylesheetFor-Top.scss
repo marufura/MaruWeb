@@ -2,7 +2,7 @@
 @use "environmentVariables";
 
 // PC タブレットの場合
-@media screen and (min-width: 991px) {
+@media screen and (min-width: environmentVariables.$breakpointOf-PC) {
   // 背景色
   body {
     background: environmentVariables.$mainBackgroundColor;
@@ -120,6 +120,7 @@
   /* news と tools の親クラス: 左右に分割 */
   #split {
     display: flex;
+    flex-direction: row-reverse;
     margin: 10px environmentVariables.$pageSideMargin;
   }
 
@@ -158,7 +159,6 @@
     }
   }
 
-
   /* 右側 <- Menuとほぼ同じ */
   #tools {
     width: 75%;
@@ -189,7 +189,7 @@
     }
 
     .ToolItem {
-      width: 15%;
+      width: 12.5%;
       margin: 0 1% 20px;
       padding: 20px 0;
       height: 150px;
@@ -223,7 +223,7 @@
         color: white;
       }
 
-      // 画像をアイコンとして使う場合 -> widthでサイズ調整(57%が良いかんじ？)
+      // 画像をアイコンとして使う場合 -> heightでサイズ調整
       .tool-icon-ringfit {
         height: 100%;
       }
@@ -241,7 +241,7 @@
 }
 
 // スマホの場合
-@media screen and (max-width: 990px) {
+@media screen and (max-width: environmentVariables.$breakpointOf-SP) {
   // 背景色
   body {
     background: environmentVariables.$mainBackgroundColor;
@@ -289,7 +289,7 @@
 
     h1 {
       color: environmentVariables.$mainStringColor;
-      font-size: 40px;
+      font-size: 70px;
       text-align: center;
       cursor: default;
     }
@@ -308,10 +308,10 @@
     }
 
     .MenuItem {
-      width: 12.5%;
+      width: 35%;
       height: auto;
 
-      margin: 0 1% 20px;
+      margin: 0 5% 20px;
       padding: 20px 0;
 
       display: block;
@@ -319,11 +319,13 @@
       border: environmentVariables.$borderWidth solid;
 
       text-align: center;
+      vertical-align: middle;
 
       transition: 0.75s;
 
       .menu-icon {
-        font-size: 700%;
+        font-size: 1000%;
+        height: 80%;
       }
 
       .menu-icon-cloud {
@@ -343,8 +345,9 @@
       }
 
       .menu-title {
+        font-size: 40px;
         margin-top: -10px;
-        font-size: 20px;
+        margin-bottom: 0;
       }
     }
 
@@ -353,63 +356,24 @@
     }
   }
 
-  /* news と tools の親クラス: 左右に分割 */
+  /* news と tools の親クラス: SPでは縦向き toolsが上でnewsが下*/
   #split {
     //display: flex;
     margin: 10px environmentVariables.$pageSideMargin;
     float: none;
   }
 
-  /* 左側 */
-  #news {
-    width: 100%;
-    padding: 0 30px 10px;
-
-    text-decoration: none;
-    border: environmentVariables.$mainStringColor environmentVariables.$borderWidth solid;
-    color: environmentVariables.$mainStringColor;
-    transition: 0.75s;
-
-    .wf-notosansjapanese {
-      font-family: "Noto Sans JP";
-    }
-
-    cursor: default;
-
-    h1 {
-      font-family: 'Zen Dots', cursive;
-      text-align: center;
-      font-size: 40px;
-      border-bottom: environmentVariables.$mainStringColor environmentVariables.$borderWidth solid;
-    }
-
-    .news-content {
-      margin-top: -10px;
-      width: 100%;
-      height: 70%;
-      border: black;
-    }
-
-    p {
-      text-align: end;
-    }
-  }
-
-
-  /* 右側 <- Menuとほぼ同じ */
+  /* 上側 <- Menuとほぼ同じ */
   #tools {
-    width: 75%;
+    width: 95%;
     height: auto;
-    margin-left: 3%;
-    border: environmentVariables.$mainStringColor environmentVariables.$borderWidth solid;
     padding: 0 30px 10px;
     font-family: 'Zen Dots', cursive;
 
     h1 {
       color: environmentVariables.$mainStringColor;
-      font-size: 40px;
+      font-size: 70px;
       text-align: center;
-      border-bottom: environmentVariables.$mainStringColor environmentVariables.$borderWidth solid;
     }
 
     a {
@@ -423,13 +387,14 @@
       flex-wrap: wrap;
       justify-content: center;
       align-items: center;
+      align-content: flex-start;
     }
 
     .ToolItem {
-      width: 15%;
+      width: 25%;
       margin: 0 1% 20px;
       padding: 20px 0;
-      height: 150px;
+      height: 250px;
       display: block;
 
       border: environmentVariables.$borderWidth solid;
@@ -439,8 +404,9 @@
       transition: 0.75s;
 
       .tool-icon {
-        font-size: 600%;
-        height: 70%;
+        padding-top: 5%;
+        font-size: 900%;
+        height: 75%;
       }
 
       // Google Fonts や Font Awesome を使う場合 -> Colorだけ選択すればよい
@@ -462,16 +428,53 @@
 
       // 画像をアイコンとして使う場合 -> widthでサイズ調整(57%が良いかんじ？)
       .tool-icon-ringfit {
-        height: 100%;
+        height: 75%;
       }
 
       .tool-title {
-        font-size: 15px;
+        margin-top: -10%;
+        font-size: 35px;
       }
     }
 
     .ToolItem:hover {
       background-color: environmentVariables.$mainStringColor-transparent;
+    }
+  }
+
+  /* 下側 */
+  #news {
+    width: 90%;
+    padding: 0 30px 10px;
+
+    text-decoration: none;
+    color: environmentVariables.$mainStringColor;
+    transition: 0.75s;
+
+    .wf-notosansjapanese {
+      font-family: "Noto Sans JP";
+    }
+
+    cursor: default;
+
+    h1 {
+      font-family: 'Zen Dots', cursive;
+      text-align: center;
+      font-size: 70px;
+      border-bottom: environmentVariables.$mainStringColor environmentVariables.$borderWidth solid;
+    }
+
+    .news-content {
+      margin-top: -10px;
+      width: 100%;
+      height: 1000px;
+      border: black;
+    }
+
+    p {
+      font-size: 35px;
+      text-align: end;
+      border-bottom: environmentVariables.$mainStringColor environmentVariables.$borderWidth solid;
     }
   }
 

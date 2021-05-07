@@ -138,27 +138,6 @@ footer ul {
   color: rgba(255, 255, 255, 0.7);
 }
 
-#topFooter .nav a {
-  text-align: center;
-  text-decoration: none;
-  transition: 0.75s;
-}
-#topFooter .nav a img {
-  height: 30px;
-}
-
-#topFooter .nav a:hover {
-  color: white;
-}
-
-#topFooter .nav div {
-  text-align: center;
-  text-decoration: none;
-}
-#topFooter .nav div img {
-  height: 30px;
-}
-
 #topFooter .nav u:hover {
   color: white;
   cursor: default;
@@ -186,28 +165,74 @@ footer ul {
     padding-left: 1%;
     padding-right: 1%;
   }
+
+  #topFooter .nav a {
+    text-align: center;
+    text-decoration: none;
+    transition: 0.75s;
+  }
+  #topFooter .nav a img {
+    height: 30px;
+  }
+
+  #topFooter .nav a:hover {
+    color: white;
+  }
+
+  #topFooter .nav div {
+    text-align: center;
+    text-decoration: none;
+  }
+  #topFooter .nav div img {
+    height: 30px;
+  }
 }
 @media only screen and (max-width: 990px) {
   #topFooter {
     text-align: center;
+    border-top: rgba(255, 255, 255, 0.9) 1px solid;
   }
 
   #topFooter .nav li {
     margin-top: 20px;
     margin-bottom: 20px;
     text-align: center;
+    font-size: 35px;
   }
 
   #topFooter .nav li a {
     padding: 12px 20px;
   }
+
+  #topFooter .nav li a {
+    text-align: center;
+    text-decoration: none;
+    transition: 0.75s;
+  }
+  #topFooter .nav li a img {
+    width: 90px;
+    height: 90px;
+  }
+
+  #topFooter .nav a:hover {
+    color: white;
+  }
+
+  #topFooter .nav li div {
+    text-align: center;
+    text-decoration: none;
+  }
+  #topFooter .nav li div img {
+    height: 90px;
+  }
 }
 .concept {
   text-align: center;
   padding-bottom: 20px;
+  margin-top: 50px;
 }
 .concept a {
-  font-size: 20px;
+  font-size: 25px;
   color: rgba(255, 255, 255, 0.7);
   top: 130px;
   left: 50%;

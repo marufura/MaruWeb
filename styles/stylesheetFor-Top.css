@@ -92,6 +92,7 @@
   /* news と tools の親クラス: 左右に分割 */
   #split {
     display: flex;
+    flex-direction: row-reverse;
     margin: 10px 50px;
   }
 
@@ -151,7 +152,7 @@
     align-items: center;
   }
   #tools .ToolItem {
-    width: 15%;
+    width: 12.5%;
     margin: 0 1% 20px;
     padding: 20px 0;
     height: 150px;
@@ -227,7 +228,7 @@
   }
   #menu h1 {
     color: rgba(255, 255, 255, 0.9);
-    font-size: 40px;
+    font-size: 70px;
     text-align: center;
     cursor: default;
   }
@@ -243,17 +244,19 @@
     align-items: center;
   }
   #menu .MenuItem {
-    width: 12.5%;
+    width: 35%;
     height: auto;
-    margin: 0 1% 20px;
+    margin: 0 5% 20px;
     padding: 20px 0;
     display: block;
     border: 4px solid;
     text-align: center;
+    vertical-align: middle;
     transition: 0.75s;
   }
   #menu .MenuItem .menu-icon {
-    font-size: 700%;
+    font-size: 1000%;
+    height: 80%;
   }
   #menu .MenuItem .menu-icon-cloud {
     color: skyblue;
@@ -268,62 +271,31 @@
     color: orange;
   }
   #menu .MenuItem .menu-title {
+    font-size: 40px;
     margin-top: -10px;
-    font-size: 20px;
+    margin-bottom: 0;
   }
   #menu .MenuItem:hover {
     background-color: rgba(255, 255, 255, 0.2);
   }
 
-  /* news と tools の親クラス: 左右に分割 */
+  /* news と tools の親クラス: SPでは縦向き toolsが上でnewsが下*/
   #split {
     margin: 10px 50px;
     float: none;
   }
 
-  /* 左側 */
-  #news {
-    width: 100%;
-    padding: 0 30px 10px;
-    text-decoration: none;
-    border: rgba(255, 255, 255, 0.9) 4px solid;
-    color: rgba(255, 255, 255, 0.9);
-    transition: 0.75s;
-    cursor: default;
-  }
-  #news .wf-notosansjapanese {
-    font-family: "Noto Sans JP";
-  }
-  #news h1 {
-    font-family: "Zen Dots", cursive;
-    text-align: center;
-    font-size: 40px;
-    border-bottom: rgba(255, 255, 255, 0.9) 4px solid;
-  }
-  #news .news-content {
-    margin-top: -10px;
-    width: 100%;
-    height: 70%;
-    border: black;
-  }
-  #news p {
-    text-align: end;
-  }
-
-  /* 右側 <- Menuとほぼ同じ */
+  /* 上側 <- Menuとほぼ同じ */
   #tools {
-    width: 75%;
+    width: 95%;
     height: auto;
-    margin-left: 3%;
-    border: rgba(255, 255, 255, 0.9) 4px solid;
     padding: 0 30px 10px;
     font-family: "Zen Dots", cursive;
   }
   #tools h1 {
     color: rgba(255, 255, 255, 0.9);
-    font-size: 40px;
+    font-size: 70px;
     text-align: center;
-    border-bottom: rgba(255, 255, 255, 0.9) 4px solid;
   }
   #tools a {
     display: flex;
@@ -335,20 +307,22 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    align-content: flex-start;
   }
   #tools .ToolItem {
-    width: 15%;
+    width: 25%;
     margin: 0 1% 20px;
     padding: 20px 0;
-    height: 150px;
+    height: 250px;
     display: block;
     border: 4px solid;
     text-align: center;
     transition: 0.75s;
   }
   #tools .ToolItem .tool-icon {
-    font-size: 600%;
-    height: 70%;
+    padding-top: 5%;
+    font-size: 900%;
+    height: 75%;
   }
   #tools .ToolItem .tool-icon-twitter {
     color: #139ae9;
@@ -363,13 +337,44 @@
     color: white;
   }
   #tools .ToolItem .tool-icon-ringfit {
-    height: 100%;
+    height: 75%;
   }
   #tools .ToolItem .tool-title {
-    font-size: 15px;
+    margin-top: -10%;
+    font-size: 35px;
   }
   #tools .ToolItem:hover {
     background-color: rgba(255, 255, 255, 0.2);
+  }
+
+  /* 下側 */
+  #news {
+    width: 90%;
+    padding: 0 30px 10px;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.9);
+    transition: 0.75s;
+    cursor: default;
+  }
+  #news .wf-notosansjapanese {
+    font-family: "Noto Sans JP";
+  }
+  #news h1 {
+    font-family: "Zen Dots", cursive;
+    text-align: center;
+    font-size: 70px;
+    border-bottom: rgba(255, 255, 255, 0.9) 4px solid;
+  }
+  #news .news-content {
+    margin-top: -10px;
+    width: 100%;
+    height: 1000px;
+    border: black;
+  }
+  #news p {
+    font-size: 35px;
+    text-align: end;
+    border-bottom: rgba(255, 255, 255, 0.9) 4px solid;
   }
 }
 
