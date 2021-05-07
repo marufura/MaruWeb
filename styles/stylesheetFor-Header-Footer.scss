@@ -201,14 +201,21 @@ footer{
   }
 
   // twitter GitHub
-  #topFooter .nav a {
+  #topFooter .nav li a {
     text-align: center;
     text-decoration: none;
     transition: 0.75s;
 
-    img{
-      height: 30px;
+    i{
+      font-size: 300%;
     }
+    .fa-twitter{
+      color: #00acee;
+    }
+    .fa-github{
+      color: white;
+    }
+
   }
   #topFooter .nav a:hover {
     color: colorSetting-header-footer.$hoveredTextColor;
@@ -219,8 +226,11 @@ footer{
     text-align: center;
     text-decoration: none;
 
-    img{
-      height: 30px;
+    i{
+      font-size: 300%;
+    }
+    .fa-envelope{
+      color: white;
     }
   }
 }
@@ -254,6 +264,16 @@ footer{
       width: 90px;
       height: 90px;
     }
+
+    i{
+      font-size: 300%;
+    }
+    .fa-twitter{
+      color: #00acee;
+    }
+    .fa-github{
+      color: white;
+    }
   }
   #topFooter .nav a:hover {
     color: colorSetting-header-footer.$hoveredTextColor;
@@ -264,9 +284,17 @@ footer{
     text-align: center;
     text-decoration: none;
 
-    img{
-      height: 90px;
+    i{
+      font-size: 300%;
     }
+    .fa-envelope{
+      color: white;
+    }
+  }
+
+  // SPのみ間隔を少し空ける
+  .concept{
+    margin-top: 50px;
   }
 }
 
@@ -275,7 +303,6 @@ footer{
 
   text-align: center;
   padding-bottom: 20px;
-  margin-top: 50px;
 
   a {
     font-size: 25px;

@@ -166,13 +166,19 @@ footer ul {
     padding-right: 1%;
   }
 
-  #topFooter .nav a {
+  #topFooter .nav li a {
     text-align: center;
     text-decoration: none;
     transition: 0.75s;
   }
-  #topFooter .nav a img {
-    height: 30px;
+  #topFooter .nav li a i {
+    font-size: 300%;
+  }
+  #topFooter .nav li a .fa-twitter {
+    color: #00acee;
+  }
+  #topFooter .nav li a .fa-github {
+    color: white;
   }
 
   #topFooter .nav a:hover {
@@ -183,8 +189,11 @@ footer ul {
     text-align: center;
     text-decoration: none;
   }
-  #topFooter .nav div img {
-    height: 30px;
+  #topFooter .nav div i {
+    font-size: 300%;
+  }
+  #topFooter .nav div .fa-envelope {
+    color: white;
   }
 }
 @media only screen and (max-width: 990px) {
@@ -213,6 +222,15 @@ footer ul {
     width: 90px;
     height: 90px;
   }
+  #topFooter .nav li a i {
+    font-size: 300%;
+  }
+  #topFooter .nav li a .fa-twitter {
+    color: #00acee;
+  }
+  #topFooter .nav li a .fa-github {
+    color: white;
+  }
 
   #topFooter .nav a:hover {
     color: white;
@@ -222,14 +240,20 @@ footer ul {
     text-align: center;
     text-decoration: none;
   }
-  #topFooter .nav li div img {
-    height: 90px;
+  #topFooter .nav li div i {
+    font-size: 300%;
+  }
+  #topFooter .nav li div .fa-envelope {
+    color: white;
+  }
+
+  .concept {
+    margin-top: 50px;
   }
 }
 .concept {
   text-align: center;
   padding-bottom: 20px;
-  margin-top: 50px;
 }
 .concept a {
   font-size: 25px;
