@@ -1,7 +1,7 @@
 @use "colorSetting-header-footer";
 @use "environmentVariables";
 
-// PC タブレットの場合
+// PC の場合
 @media screen and (min-width: environmentVariables.$breakpointOf-PC) {
   // 背景色
   body {
@@ -240,7 +240,7 @@
 
 }
 
-// スマホの場合
+// タブレット, スマホの場合
 @media screen and (max-width: environmentVariables.$breakpointOf-SP) {
   // 背景色
   body {
@@ -250,14 +250,14 @@
 
   #title {
 
-    padding: 0 50px;
+    padding: 0 10%;
     text-decoration: none;
     width: auto;
     height: 300px;
 
     background-image: url("../img/xwing.PNG");
     background-position: 150% 30%;
-    background-size: 800px;
+    background-size: 75%;
     background-repeat: no-repeat;
 
     border-bottom: environmentVariables.$mainStringColor environmentVariables.$borderWidth-thin solid;
@@ -287,6 +287,8 @@
     margin: 10px environmentVariables.$pageSideMargin 20px;
     font-family: 'Zen Dots', cursive;
 
+    text-align: center;
+
     h1 {
       color: environmentVariables.$mainStringColor;
       font-size: 70px;
@@ -311,7 +313,7 @@
       width: 35%;
       height: auto;
 
-      margin: 0 5% 20px;
+      margin: 0 3% 50px;
       padding: 20px 0;
 
       display: block;
@@ -365,10 +367,10 @@
 
   /* 上側 <- Menuとほぼ同じ */
   #tools {
-    width: 95%;
+    width: auto;
     height: auto;
-    padding: 0 30px 10px;
     font-family: 'Zen Dots', cursive;
+    margin: 0;
 
     h1 {
       color: environmentVariables.$mainStringColor;
@@ -391,7 +393,7 @@
     }
 
     .ToolItem {
-      width: 25%;
+      width: 30%;
       margin: 0 1% 20px;
       padding: 20px 0;
       height: 250px;
@@ -444,9 +446,6 @@
 
   /* 下側 */
   #news {
-    width: 90%;
-    padding: 0 30px 10px;
-
     text-decoration: none;
     color: environmentVariables.$mainStringColor;
     transition: 0.75s;
@@ -458,6 +457,7 @@
     cursor: default;
 
     h1 {
+      margin-bottom: 10px;
       font-family: 'Zen Dots', cursive;
       text-align: center;
       font-size: 70px;
@@ -465,9 +465,10 @@
     }
 
     .news-content {
+      font-size: 30px;
       margin-top: -10px;
       width: 100%;
-      height: 1000px;
+      height: 600px;
       border: black;
     }
 

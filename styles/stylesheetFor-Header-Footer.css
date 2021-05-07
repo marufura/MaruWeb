@@ -3,7 +3,7 @@
   Header : 自作
   Footer : ほぼ https://b-risk.jp/blog/2020/06/footer/ から
 */
-@media only screen and (min-width: 991px) {
+@media only screen and (min-width: 1701px) {
   header {
     position: sticky;
     top: 0;
@@ -14,19 +14,19 @@
     font-family: "Itim", cursive;
   }
 }
-@media only screen and (min-width: 991px) and (min-width: 641px) {
+@media only screen and (min-width: 1701px) and (min-width: 641px) {
   header {
     padding-right: 20%;
     padding-left: 20%;
   }
 }
-@media only screen and (min-width: 991px) and (max-width: 640px) {
+@media only screen and (min-width: 1701px) and (max-width: 640px) {
   header {
     padding-right: 5%;
     padding-left: 5%;
   }
 }
-@media only screen and (min-width: 991px) {
+@media only screen and (min-width: 1701px) {
   header .headerItems {
     display: flex;
   }
@@ -42,20 +42,23 @@
   header .headerItems .index :hover {
     color: white;
   }
+  header .headerItems input :hover {
+    color: white;
+  }
   header .headerItems .headerItem {
     flex: auto;
   }
-  header .headerItems .headerItem a {
+  header .headerItems .headerItem a, header .headerItems .headerItem label {
     transition: 0.75s;
   }
 }
-@media only screen and (min-width: 991px) {
+@media only screen and (min-width: 1701px) {
   header .header-logo-img {
     height: 30px;
     padding: 10px;
   }
 }
-@media only screen and (min-width: 991px) {
+@media only screen and (min-width: 1701px) {
   header .tools-index {
     /* クリック時の登場アニメーション */
   }
@@ -99,7 +102,7 @@
     }
   }
 }
-@media only screen and (max-width: 990px) {
+@media only screen and (max-width: 1700px) {
   header {
     display: none;
   }
@@ -144,7 +147,7 @@ footer ul {
   transition: 0.75s;
 }
 
-@media only screen and (min-width: 991px) {
+@media only screen and (min-width: 1701px) {
   #topFooter .nav {
     display: -webkit-box;
     display: -webkit-flex;
@@ -196,7 +199,7 @@ footer ul {
     color: white;
   }
 }
-@media only screen and (max-width: 990px) {
+@media only screen and (max-width: 1700px) {
   #topFooter {
     text-align: center;
     border-top: rgba(255, 255, 255, 0.9) 1px solid;
@@ -249,6 +252,7 @@ footer ul {
 
   .concept {
     margin-top: 50px;
+    margin-bottom: 50px;
   }
 }
 .concept {

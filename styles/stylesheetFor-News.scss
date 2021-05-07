@@ -1,12 +1,26 @@
 @use "environmentVariables";
 
-body{
+body {
   margin-top: 0;
+  padding: 0 2%;
   background-color: black;
 }
 
-.news-item{
+.news-item {
   font-family: "Noto Sans JP";
   color: white;
   border-bottom: environmentVariables.$mainStringColor environmentVariables.$borderWidth-thin solid;
+
+  .news-title {
+    margin-top: 20px;
+    font-size: 30px;
+  }
+
+  .news-content {
+    font-size: 20px;
+  }
+
+  .news-update {
+    text-align: end;
+  }
 }

@@ -57,10 +57,14 @@
         color: colorSetting-header-footer.$hoveredTextColor;
       }
 
+      input :hover {
+        color: colorSetting-header-footer.$hoveredTextColor;
+      }
+
       .headerItem {
         flex: auto;
 
-        a {
+        a, label{
           transition: 0.75s;
         }
       }
@@ -295,6 +299,7 @@ footer{
   // SPのみ間隔を少し空ける
   .concept{
     margin-top: 50px;
+    margin-bottom: 50px;
   }
 }
 
