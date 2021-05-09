@@ -3,7 +3,7 @@
   Header : 自作
   Footer : ほぼ https://b-risk.jp/blog/2020/06/footer/ から
 */
-@media only screen and (min-width: 1101px) {
+@media only screen and (min-width: 1201px) {
   header {
     position: sticky;
     top: 0;
@@ -14,19 +14,19 @@
     font-family: "Itim", cursive;
   }
 }
-@media only screen and (min-width: 1101px) and (min-width: 641px) {
+@media only screen and (min-width: 1201px) and (min-width: 641px) {
   header {
     padding-right: 20%;
     padding-left: 20%;
   }
 }
-@media only screen and (min-width: 1101px) and (max-width: 640px) {
+@media only screen and (min-width: 1201px) and (max-width: 640px) {
   header {
     padding-right: 5%;
     padding-left: 5%;
   }
 }
-@media only screen and (min-width: 1101px) {
+@media only screen and (min-width: 1201px) {
   header .headerItems {
     display: flex;
   }
@@ -52,13 +52,13 @@
     transition: 0.75s;
   }
 }
-@media only screen and (min-width: 1101px) {
+@media only screen and (min-width: 1201px) {
   header .header-logo-img {
     height: 30px;
     padding: 10px;
   }
 }
-@media only screen and (min-width: 1101px) {
+@media only screen and (min-width: 1201px) {
   header .tools-index {
     /* クリック時の登場アニメーション */
   }
@@ -102,7 +102,7 @@
     }
   }
 }
-@media only screen and (max-width: 1100px) {
+@media only screen and (max-width: 1200px) {
   header {
     display: none;
   }
@@ -147,7 +147,7 @@ footer ul {
   transition: 0.75s;
 }
 
-@media only screen and (min-width: 1101px) {
+@media only screen and (min-width: 1201px) {
   #topFooter .nav {
     display: -webkit-box;
     display: -webkit-flex;
@@ -199,7 +199,7 @@ footer ul {
     color: white;
   }
 }
-@media only screen and (max-width: 1100px) {
+@media only screen and (max-width: 1200px) {
   #topFooter {
     text-align: center;
     border-top: rgba(255, 255, 255, 0.9) 1px solid;

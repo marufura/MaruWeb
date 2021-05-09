@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@media screen and (min-width: 1101px) {
+@media screen and (min-width: 1201px) {
   body {
     background: black;
     margin: 0;
@@ -165,18 +165,6 @@
     font-size: 600%;
     height: 70%;
   }
-  #tools .ToolItem .tool-icon-twitter {
-    color: #139ae9;
-  }
-  #tools .ToolItem .tool-icon-millionEffort {
-    color: green;
-  }
-  #tools .ToolItem .tool-icon-airtable {
-    color: lightcyan;
-  }
-  #tools .ToolItem .tool-icon-pory {
-    color: white;
-  }
   #tools .ToolItem .tool-icon-ringfit {
     height: 100%;
   }
@@ -187,7 +175,7 @@
     background-color: rgba(255, 255, 255, 0.2);
   }
 }
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1200px) {
   body {
     background: black;
     margin: 0;
@@ -325,18 +313,6 @@
     font-size: 900%;
     height: 75%;
   }
-  #tools .ToolItem .tool-icon-twitter {
-    color: #139ae9;
-  }
-  #tools .ToolItem .tool-icon-millionEffort {
-    color: green;
-  }
-  #tools .ToolItem .tool-icon-airtable {
-    color: lightcyan;
-  }
-  #tools .ToolItem .tool-icon-pory {
-    color: white;
-  }
   #tools .ToolItem .tool-icon-ringfit {
     height: 75%;
   }
@@ -377,6 +353,21 @@
     text-align: end;
     border-bottom: rgba(255, 255, 255, 0.9) 4px solid;
   }
+}
+#tools .ToolItem .tool-icon-twitter {
+  color: #139ae9;
+}
+#tools .ToolItem .tool-icon-millionEffort {
+  color: green;
+}
+#tools .ToolItem .tool-icon-airtable {
+  color: lightcyan;
+}
+#tools .ToolItem .tool-icon-pory {
+  color: white;
+}
+#tools .ToolItem .tool-icon-hackmd {
+  color: lightgray;
 }
 
 /*# sourceMappingURL=stylesheetFor-Top.css.map */
