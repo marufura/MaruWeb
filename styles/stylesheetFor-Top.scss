@@ -316,6 +316,10 @@
         color: skyblue;
       }
 
+      .menu-icon-lab {
+        color: rgb(190, 190, 190);
+      }
+
       .menu-icon-description {
         color: lightcoral;
       }
@@ -326,6 +330,10 @@
 
       .menu-icon-camp {
         color: orange;
+      }
+
+      .menu-icon-travel {
+        color: blue;
       }
 
       .menu-title {
@@ -471,7 +479,29 @@
       color: lightgray;
     }
 
+    .tool-icon-GES{
+      color: rgb(91, 91, 175); 
+    }
 
+    .tool-icon-miro{
+      color: yellow
+    }
+
+    .tool-icon-mural{
+      color: rgb(212, 78, 101);
+    }
+
+    .tool-icon-gatherTwon{
+      color: darkslateblue;
+    }
+
+    .tool-icon-poll {
+      color: rgb(86, 86, 199);
+    }
+
+    .tool-icon-quiz{
+      color:rgb(212, 78, 101);
+    }
 
   }
 }
