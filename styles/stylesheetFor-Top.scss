@@ -90,6 +90,10 @@
         font-size: 700%;
       }
 
+      .menu-icon-profile {
+        color: gray;
+      }
+
       .menu-icon-cloud {
         color: skyblue;
       }
@@ -104,6 +108,10 @@
 
       .menu-icon-camp {
         color: orange;
+      }
+
+      .menu-icon-travel {
+        color: cadetblue;
       }
 
       .menu-title {
@@ -212,7 +220,7 @@
       }
 
       .tool-title {
-        font-size: 15px;
+        font-size: 14px;
       }
     }
 
@@ -480,7 +488,7 @@
     }
 
     .tool-icon-GES{
-      color: rgb(91, 91, 175); 
+      color: rgb(121, 207, 222);
     }
 
     .tool-icon-miro{
@@ -491,16 +499,12 @@
       color: rgb(212, 78, 101);
     }
 
-    .tool-icon-gatherTwon{
+    .tool-icon-gatherTown{
       color: darkslateblue;
     }
 
     .tool-icon-poll {
       color: rgb(86, 86, 199);
-    }
-
-    .tool-icon-quiz{
-      color:rgb(212, 78, 101);
     }
 
   }
