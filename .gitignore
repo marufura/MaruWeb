@@ -1,2 +1,3 @@
-/.idea
-/img/logo.afdesign
+mdconverter/src/*
+mdconverter/res/*
+
