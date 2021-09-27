@@ -1,0 +1,7 @@
+input-files:
+  - src/input.md
+
+output-file: res/output.docx
+
+table-of-contents: true
+toc-depth: 2
