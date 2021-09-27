@@ -1,8 +1,10 @@
 # What is mdConverter?
 
-mdファイルを変換します。
+mdファイルを Pandoc を利用して任意のファイル形式に変換します。(主に pdf,html,tex,docx)
 
-## Setting
+## Start using mdConverter
+
+Docker は install されているものとします。
 
 ```sh
 docker build -t mdconverter .
@@ -10,7 +12,7 @@ docker build -t mdconverter .
 
 ## Usage
 
-1. mdファイルを作成しyamlフォルダ内の指定したファイル名\(sample だと input.md\) にして src に配置
+1. mdファイルを作成しyamlフォルダ内の指定したファイル\(sample だと src/input.md\) を配置
     - input-files で指定可能
 2. ./mdConverter.bat [yaml フォルダ内のファイル名] として実行
 3. 指定されたファイルが生成
@@ -26,6 +28,20 @@ PowerShellで
 
 Contaier内で
 $ pandoc -d xxx-defaults.yaml
+```
+
+## Stop using mdConverter
+
+docker の imageを検索
+
+```sh
+docker image ls
+```
+
+mdconverterの "IMAGE ID" を参照したうえで image を削除
+
+```sh
+docker rmi [IMAGE ID]
 ```
 
 ## Reference
