@@ -46,15 +46,24 @@
     cursor: default;
   }
   #menu a {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     color: rgba(255, 255, 255, 0.9);
     text-decoration: none;
   }
   #menu .MenuItems {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   #menu .MenuItem {
     width: 12.5%;
@@ -64,6 +73,7 @@
     display: block;
     border: 4px solid;
     text-align: center;
+    -webkit-transition: 0.75s;
     transition: 0.75s;
   }
   #menu .MenuItem .menu-icon {
@@ -97,8 +107,13 @@
 
   /* news と tools の親クラス: 左右に分割 */
   #split {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row-reverse;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
     margin: 10px 50px;
   }
 
@@ -109,6 +124,7 @@
     text-decoration: none;
     border: rgba(255, 255, 255, 0.9) 4px solid;
     color: rgba(255, 255, 255, 0.9);
+    -webkit-transition: 0.75s;
     transition: 0.75s;
     cursor: default;
   }
@@ -147,15 +163,24 @@
     border-bottom: rgba(255, 255, 255, 0.9) 4px solid;
   }
   #tools a {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     color: rgba(255, 255, 255, 0.9);
     text-decoration: none;
   }
   #tools .ToolItems {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   #tools .ToolItem {
     width: 12.5%;
@@ -165,6 +190,7 @@
     display: block;
     border: 4px solid;
     text-align: center;
+    -webkit-transition: 0.75s;
     transition: 0.75s;
   }
   #tools .ToolItem .tool-icon {
@@ -228,15 +254,24 @@
     cursor: default;
   }
   #menu a {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     color: rgba(255, 255, 255, 0.9);
     text-decoration: none;
   }
   #menu .MenuItems {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   #menu .MenuItem {
     width: 35%;
@@ -246,6 +281,7 @@
     display: block;
     border: 4px solid;
     text-align: center;
+    -webkit-transition: 0.75s;
     transition: 0.75s;
   }
   #menu .MenuItem .menu-icon {
@@ -298,16 +334,26 @@
     text-align: center;
   }
   #tools a {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     color: rgba(255, 255, 255, 0.9);
     text-decoration: none;
   }
   #tools .ToolItems {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    align-content: flex-start;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-line-pack: start;
+        align-content: flex-start;
   }
   #tools .ToolItem {
     width: 30%;
@@ -317,6 +363,7 @@
     display: block;
     border: 4px solid;
     text-align: center;
+    -webkit-transition: 0.75s;
     transition: 0.75s;
   }
   #tools .ToolItem .tool-icon {
@@ -339,6 +386,7 @@
   #news {
     text-decoration: none;
     color: rgba(255, 255, 255, 0.9);
+    -webkit-transition: 0.75s;
     transition: 0.75s;
     cursor: default;
   }
@@ -395,5 +443,4 @@
 #tools .ToolItem .tool-icon-poll {
   color: #5656c7;
 }
-
 /*# sourceMappingURL=stylesheetFor-Top.css.map */

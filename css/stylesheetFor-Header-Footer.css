@@ -28,6 +28,8 @@
 }
 @media only screen and (min-width: 1201px) {
   header .headerItems {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
   }
   header .headerItems a, header .headerItems .tools-index, header .headerItems .others-index, header .headerItems label {
@@ -46,9 +48,12 @@
     color: white;
   }
   header .headerItems .headerItem {
-    flex: auto;
+    -webkit-box-flex: 1;
+        -ms-flex: auto;
+            flex: auto;
   }
   header .headerItems .headerItem a, header .headerItems .headerItem label {
+    -webkit-transition: 0.75s;
     transition: 0.75s;
   }
 }
@@ -73,6 +78,7 @@
     padding: 0;
     overflow: hidden;
     opacity: 0;
+    -webkit-transition: 0.8s;
     transition: 0.8s;
   }
   header .tools-index .tools-index-show ul {
@@ -89,16 +95,31 @@
   header .tools-index input:checked ~ .tools-index-show {
     height: auto;
     opacity: 1;
-    animation: SlideIn 0.8s;
+    -webkit-animation: SlideIn 0.8s;
+            animation: SlideIn 0.8s;
+  }
+  @-webkit-keyframes SlideIn {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(-20px);
+              transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
   }
   @keyframes SlideIn {
     0% {
       opacity: 0;
-      transform: translateY(-20px);
+      -webkit-transform: translateY(-20px);
+              transform: translateY(-20px);
     }
     100% {
       opacity: 1;
-      transform: translateY(0);
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
     }
   }
 }
@@ -144,21 +165,19 @@ footer ul {
 #topFooter .nav u:hover {
   color: white;
   cursor: default;
+  -webkit-transition: 0.75s;
   transition: 0.75s;
 }
 
 @media only screen and (min-width: 1201px) {
   #topFooter .nav {
     display: -webkit-box;
-    display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
-    -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
     -webkit-box-pack: center;
-    -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center;
     padding: 20px 0;
@@ -172,6 +191,7 @@ footer ul {
   #topFooter .nav li a {
     text-align: center;
     text-decoration: none;
+    -webkit-transition: 0.75s;
     transition: 0.75s;
   }
   #topFooter .nav li a i {
@@ -219,6 +239,7 @@ footer ul {
   #topFooter .nav li a {
     text-align: center;
     text-decoration: none;
+    -webkit-transition: 0.75s;
     transition: 0.75s;
   }
   #topFooter .nav li a img {
@@ -265,6 +286,7 @@ footer ul {
   top: 130px;
   left: 50%;
   z-index: 1;
+  -webkit-transition: 0.75s;
   transition: 0.75s;
 }
 .concept a:hover {
@@ -280,18 +302,24 @@ footer ul {
   content: "";
   position: absolute;
   width: 100%;
-  transform: scaleX(0);
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
   height: 2px;
   bottom: 0;
   left: 0;
   background-color: white;
-  transform-origin: bottom right;
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+  -webkit-transition: -webkit-transform 0.75s cubic-bezier(0.86, 0, 0.07, 1);
+  transition: -webkit-transform 0.75s cubic-bezier(0.86, 0, 0.07, 1);
   transition: transform 0.75s cubic-bezier(0.86, 0, 0.07, 1);
+  transition: transform 0.75s cubic-bezier(0.86, 0, 0.07, 1), -webkit-transform 0.75s cubic-bezier(0.86, 0, 0.07, 1);
 }
 
 .borderLeftRight:hover::after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
 }
-
 /*# sourceMappingURL=stylesheetFor-Header-Footer.css.map */
