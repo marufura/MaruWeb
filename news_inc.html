@@ -5,84 +5,100 @@
     <meta charset="utf-8">
     <title>News</title>
     <link rel="stylesheet" href="css/stylesheetFor-News.min.css">
+    <link rel="stylesheet" href="css/stylesheetFor-Header-Footer.min.css">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP" rel="stylesheet">
 
     <!--  デバイスの画面サイズを確認する  -->
     <meta name=”viewport” content=”width=device-width,initial-scale=1.0″>
+
+    <!-- jQuery.jsの読み込み -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+
+    <!-- 共通部分の読み込み: header -->
+    <script type="text/javascript">
+        $(function () {
+            // header.htmlをid属性「header」という名前で読み込むように指定する
+            $("#header").load("header.html");
+        });
+    </script>
 </head>
 
 <body>
 
-<!--  上に以下のテンプレートを貼って、最新の投稿を記入していく  -->
+    <!--  上に以下のテンプレートを貼って、最新の投稿を記入していく  -->
 
-<div class="news-item">
-    <h2 class="news-title">
-        Profile の作成
-    </h2>
-    <p class="news-content">
-        自己紹介やインターン面接が増えたので整理可能なプロフィール項目を作成する予定です、中身はまだ。
-    </p>
-    <p class="news-update">
-        更新: 2021/9/26
-    </p>
-</div>
+    <div id="header">
+        <div id="header"></div>
+    </div>
 
-<div class="news-item">
-    <h2 class="news-title">
-        内容変更について
-    </h2>
-    <p class="news-content">
-        Blogを公開設定にしたほか、新たにTravelも作成しました。
-        <br>
-        また、Tool Boxの内容を増やしました。
-    </p>
-    <p class="news-update">
-        更新: 2021/9/1
-    </p>
-</div>
-
-<div class="news-item">
-    <h2 class="news-title">
-        機能追加について
-    </h2>
-    <p class="news-content">
-        Blog, Campingの利用を開始しました.
-
-        <br>
-        追記: Booksも追加しました.
-    </p>
-    <p class="news-update">
-        更新: 2021/5/2
-    </p>
-</div>
-
-<div class="news-item">
     <div class="news-item">
         <h2 class="news-title">
-            Issue
+            Profile の作成
         </h2>
         <p class="news-content">
-            何か不具合があればぜひ私に報告してください、良いことがあるかもしれません。
+            自己紹介やインターン面接が増えたので整理可能なプロフィール項目を作成する予定です、中身はまだ。
         </p>
         <p class="news-update">
-            更新: 2021/3/28
+            更新: 2021/9/26
         </p>
     </div>
-</div>
 
-<div class="news-item">
     <div class="news-item">
         <h2 class="news-title">
-            初めての投稿
+            内容変更について
         </h2>
         <p class="news-content">
-            News項目を作成しました。
+            Blogを公開設定にしたほか、新たにTravelも作成しました。
+            <br>
+            また、Tool Boxの内容を増やしました。
         </p>
         <p class="news-update">
-            更新: 2021/3/28
+            更新: 2021/9/1
         </p>
     </div>
-</div>
+
+    <div class="news-item">
+        <h2 class="news-title">
+            機能追加について
+        </h2>
+        <p class="news-content">
+            Blog, Campingの利用を開始しました.
+
+            <br>
+            追記: Booksも追加しました.
+        </p>
+        <p class="news-update">
+            更新: 2021/5/2
+        </p>
+    </div>
+
+    <div class="news-item">
+        <div class="news-item">
+            <h2 class="news-title">
+                Issue
+            </h2>
+            <p class="news-content">
+                何か不具合があればぜひ私に報告してください、良いことがあるかもしれません。
+            </p>
+            <p class="news-update">
+                更新: 2021/3/28
+            </p>
+        </div>
+    </div>
+
+    <div class="news-item">
+        <div class="news-item">
+            <h2 class="news-title">
+                初めての投稿
+            </h2>
+            <p class="news-content">
+                News項目を作成しました。
+            </p>
+            <p class="news-update">
+                更新: 2021/3/28
+            </p>
+        </div>
+    </div>
 
 </body>
 
