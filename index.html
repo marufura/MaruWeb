@@ -3,6 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
+
+    
     <!--  デバイスの画面サイズを確認する  -->
     <meta name=”viewport” content=”width=device-width,initial-scale=1.0″>
 
@@ -30,23 +32,20 @@
 
     <!-- jQuery.jsの読み込み -->
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
-    <!-- スムーズスクロール部分の記述 -->
-    <script>
+    
+    <!-- 共通部分の読み込み: header -->
+    <script type="text/javascript">
         $(function () {
-            // #で始まるアンカーをクリックした場合に処理
-            $('a[href^=#]').click(function () {
-                // スクロールの速度
-                const speed = 600; // ミリ秒
-                // アンカーの値取得
-                const href = $(this).attr("href");
-                // 移動先を取得
-                const target = $(href === "#" || href === "" ? 'html' : href);
-                // 移動先を数値で取得
-                const position = target.offset().top;
-                // スムーススクロール
-                $('body,html').animate({scrollTop: position}, speed, 'swing');
-                return false;
-            });
+            // header.htmlをid属性「header」という名前で読み込むように指定する
+            $("#header").load("header.html");
+        });
+    </script>
+
+    <!-- 共通部分の読み込み: footer -->
+    <script type="text/javascript">
+        $(function () {
+            // header.htmlをid属性「header」という名前で読み込むように指定する
+            $("#footer").load("footer.html");
         });
     </script>
 
@@ -54,176 +53,77 @@
 
 <body>
 
-<!-- Header -->
-<header id="topHeader">
-    <div class="headerItems">
-
-        <div class="headerItem index">
-            <a href="#"
-               class="borderLeftRight" target="_blank" rel="noopener">
-                Profile
-            </a>
-        </div>
-
-        <div class="headerItem index">
-            <a href="https://waseda.app.box.com/folder/48243326423" class="borderLeftRight" target="_blank"
-               rel="noopener">
-                Cloud
-            </a>
-        </div>
-
-        <div class="headerItem index">
-            <a href="https://marufura.hatenablog.jp/" class="borderLeftRight" target="_blank" rel="noopener">
-                Blog
-            </a>
-        </div>
-
-        <div class="headerItem index">
-            <a href="https://marubooks.pory.app" class="borderLeftRight" target="_blank" rel="noopener">
-                Books
-            </a>
-        </div>
-
-        <div class="headerItem index">
-            <a href="https://marucamping.pory.app" class="borderLeftRight" target="_blank" rel="noopener">
-                Camping
-            </a>
-        </div>
-
-        <div class="headerItem index">
-            <a href="https://marutravel.pory.app" class="borderLeftRight" target="_blank" rel="noopener">
-                Travel
-            </a>
-        </div>
-
-        <div class="headerItem index tools-index">
-            <label for="label-tools" class="borderLeftRight">Tool Box</label>
-            <input type="checkbox" id="label-tools"/>
-            <div class="tools-index-show">
-                <!--非表示ここから-->
-                <ul>
-                    <li>
-                        <a href="https://airtable.com/" target="_blank" rel="noopener">
-                            Airtable
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://pory.io/sites" target="_blank" rel="noopener">
-                            Pory.io
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://hackmd.io" target="_blank" rel="noopener">
-                            hackMD
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.polleverywhere.com/signup" target="_blank" rel="noopener">
-                            Poll Everywhere
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://miro.com/" target="_blank" rel="noopener">
-                            Miro
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://app.mural.co/" target="_blank" rel="noopener">
-                            Mural
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://earth.google.com/studio/" target="_blank" rel="noopener">
-                            Google Earth Studio
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.gather.town/" target="_blank" rel="noopener">
-                            Gather.town
-                        </a>
-                    </li>
-                    <!--
-                <li>
-                    <a href="#" target="_blank" rel="noopener">
-                        tools-test1
-                    </a>
-                </li>
-                -->
-                </ul>
-                <!--ここまで-->
-            </div>
-        </div>
+    <div id="header">
+        <div id="header"></div>
     </div>
-</header>
 
-<div id="title">
-    <h1 class="homepageName">
-        MaruWeb
-    </h1>
-    <p>
-        Since March 2021
-        <br>
-        Made by Yuma Takai
-    </p>
-</div>
+    <div id="title">
+        <h1 class="homepageName">
+            MaruWeb
+        </h1>
+        <p>
+            Since March 2021
+            <br>
+            Made by Yuma Takai
+        </p>
+    </div>
 
-<!-- 上に表示 -->
-<div id="menu">
-    <h1>
-        MENU
-    </h1>
+    <!-- 上に表示 -->
+    <div id="menu">
+        <h1>
+            MENU
+        </h1>
 
-    <div class="MenuItems">
-        <a href="#" class="MenuItem"
-           target="_blank" rel="noopener">
+        <div class="MenuItems">
+            <a href="#" class="MenuItem" target="_blank" rel="noopener">
                 <span class="material-icons-round menu-icon menu-icon-profile">
                     account_circle
                 </span>
-            <h3 class="menu-title">
-                Profile
-            </h3>
-        </a>
-        <a href="https://waseda.app.box.com/folder/48243326423" class="MenuItem" target="_blank" rel="noopener">
+                <h3 class="menu-title">
+                    Profile
+                </h3>
+            </a>
+            <a href="https://waseda.app.box.com/folder/48243326423" class="MenuItem" target="_blank" rel="noopener">
                 <span class="material-icons-round menu-icon menu-icon-cloud">
                     cloud
                 </span>
-            <h3 class="menu-title">
-                Cloud
-            </h3>
-        </a>
-        <a href="https://marufura.hatenablog.jp/" class="MenuItem" target="_blank" rel="noopener">
+                <h3 class="menu-title">
+                    Cloud
+                </h3>
+            </a>
+            <a href="https://marufura.hatenablog.jp/" class="MenuItem" target="_blank" rel="noopener">
                 <span class="material-icons-round menu-icon menu-icon-description">
                     description
                 </span>
-            <h3 class="menu-title">
-                Blog
-            </h3>
-        </a>
-        <a href="https://marubooks.pory.app/" class="MenuItem" target="_blank" rel="noopener">
+                <h3 class="menu-title">
+                    Blog
+                </h3>
+            </a>
+            <a href="https://marubooks.pory.app/" class="MenuItem" target="_blank" rel="noopener">
                 <span class="material-icons-round menu-icon menu-icon-books">
                     menu_book
                 </span>
-            <h3 class="menu-title">
-                Books
-            </h3>
-        </a>
-        <a href="https://marucamping.pory.app" class="MenuItem" target="_blank" rel="noopener">
+                <h3 class="menu-title">
+                    Books
+                </h3>
+            </a>
+            <a href="https://marucamping.pory.app" class="MenuItem" target="_blank" rel="noopener">
                 <span class="material-icons-round menu-icon menu-icon-camp">
                     local_fire_department
                 </span>
-            <h3 class="menu-title">
-                Camping
-            </h3>
-        </a>
-        <a href="https://marutravel.pory.app" class="MenuItem" target="_blank" rel="noopener">
+                <h3 class="menu-title">
+                    Camping
+                </h3>
+            </a>
+            <a href="https://marutravel.pory.app" class="MenuItem" target="_blank" rel="noopener">
                 <span class="material-icons-round menu-icon menu-icon-travel">
                     travel_explore
                 </span>
-            <h3 class="menu-title">
-                Travel
-            </h3>
-        </a>
-        <!-- 6まで追加可能: templeteとして以下のものを用意
+                <h3 class="menu-title">
+                    Travel
+                </h3>
+            </a>
+            <!-- 6まで追加可能: templeteとして以下のものを用意
     <a href="#" class="MenuItem" target="_blank" rel="noopener">
                 <span class="material-icons-round menu-icon menu-icon-">
 
@@ -233,123 +133,123 @@
                 </h3>
             </a>
     -->
+        </div>
     </div>
-</div>
 
-<!-- SP版にてtoolsが上に来るような順番に PCでflex-directionでどっちが左右になるかを調整 -->
-<div id="split">
-    <!-- 右側 -->
-    <div id="tools">
-        <h1>
-            Tool Box
-        </h1>
-        <div class="ToolItems">
+    <!-- SP版にてtoolsが上に来るような順番に PCでflex-directionでどっちが左右になるかを調整 -->
+    <div id="split">
+        <!-- 右側 -->
+        <div id="tools">
+            <h1>
+                Tool Box
+            </h1>
+            <div class="ToolItems">
 
-            <!--    Font Awesome からアイコンを持ってくる        -->
-            <a href="https://airtable.com/" class="ToolItem" target="_blank" rel="noopener">
-                <i class="fas fa-database tool-icon tool-icon-airtable"></i>
-                <h3 class="tool-title">
-                    Airtable
-                </h3>
-            </a>
+                <!--    Font Awesome からアイコンを持ってくる        -->
+                <a href="https://airtable.com/" class="ToolItem" target="_blank" rel="noopener">
+                    <i class="fas fa-database tool-icon tool-icon-airtable"></i>
+                    <h3 class="tool-title">
+                        Airtable
+                    </h3>
+                </a>
 
-            <a href="https://pory.io/sites" class="ToolItem" target="_blank" rel="noopener">
+                <a href="https://pory.io/sites" class="ToolItem" target="_blank" rel="noopener">
                     <span class="material-icons-round tool-icon tool-icon-pory">
                         edit_note
                     </span>
-                <h3 class="tool-title">
-                    Pory.io
-                </h3>
-            </a>
+                    <h3 class="tool-title">
+                        Pory.io
+                    </h3>
+                </a>
 
-            <a href="https://hackmd.io" class="ToolItem" target="_blank" rel="noopener">
-                <i class="far fa-clipboard tool-icon tool-icon-hackmd"></i>
-                <h3 class="tool-title">
-                    HackMD
-                </h3>
-            </a>
+                <a href="https://hackmd.io" class="ToolItem" target="_blank" rel="noopener">
+                    <i class="far fa-clipboard tool-icon tool-icon-hackmd"></i>
+                    <h3 class="tool-title">
+                        HackMD
+                    </h3>
+                </a>
 
-            <a href="https://www.polleverywhere.com/signup" class="ToolItem" target="_blank" rel="noopener">
-                <i class="fas fa-poll tool-icon tool-icon-poll"></i>
-                <h3 class="tool-title">
-                    Poll Everywhere
-                </h3>
-            </a>
+                <a href="https://www.polleverywhere.com/signup" class="ToolItem" target="_blank" rel="noopener">
+                    <i class="fas fa-poll tool-icon tool-icon-poll"></i>
+                    <h3 class="tool-title">
+                        Poll Everywhere
+                    </h3>
+                </a>
 
-            <a href="https://miro.com/" class="ToolItem" target="_blank" rel="noopener">
-                <!--                    <i class="fas fa-chalkboard tool-icon tool-icon-miro"></i>-->
-                <span class="material-icons-round tool-icon tool-icon-miro">
-                    dashboard
-                </span>
-                <h3 class="tool-title">
-                    Miro
-                </h3>
-            </a>
+                <a href="https://miro.com/" class="ToolItem" target="_blank" rel="noopener">
+                    <!--                    <i class="fas fa-chalkboard tool-icon tool-icon-miro"></i>-->
+                    <span class="material-icons-round tool-icon tool-icon-miro">
+                        dashboard
+                    </span>
+                    <h3 class="tool-title">
+                        Miro
+                    </h3>
+                </a>
 
-            <a href="https://app.mural.co/" class="ToolItem" target="_blank" rel="noopener">
-                <!--                    <i class="fas fa-chalkboard tool-icon tool-icon-mural"></i>-->
-                <span class="material-icons-round tool-icon tool-icon-mural">
-                    dashboard
-                </span>
-                <h3 class="tool-title">
-                    Mural
-                </h3>
-            </a>
+                <a href="https://app.mural.co/" class="ToolItem" target="_blank" rel="noopener">
+                    <!--                    <i class="fas fa-chalkboard tool-icon tool-icon-mural"></i>-->
+                    <span class="material-icons-round tool-icon tool-icon-mural">
+                        dashboard
+                    </span>
+                    <h3 class="tool-title">
+                        Mural
+                    </h3>
+                </a>
 
-            <a href="https://earth.google.com/studio/" class="ToolItem" target="_blank" rel="noopener">
-                <i class="fas fa-globe-asia tool-icon tool-icon-GES"></i>
-                <h3 class="tool-title">
-                    Google Earth Studio
-                </h3>
-            </a>
+                <a href="https://earth.google.com/studio/" class="ToolItem" target="_blank" rel="noopener">
+                    <i class="fas fa-globe-asia tool-icon tool-icon-GES"></i>
+                    <h3 class="tool-title">
+                        Google Earth Studio
+                    </h3>
+                </a>
 
-            <a href="https://www.gather.town/" class="ToolItem" target="_blank" rel="noopener">
+                <a href="https://www.gather.town/" class="ToolItem" target="_blank" rel="noopener">
                     <span class="material-icons-round tool-icon tool-icon-gatherTown">
                         headset_mic
                     </span>
-                <h3 class="tool-title">
-                    Gather.town
-                </h3>
-            </a>
+                    <h3 class="tool-title">
+                        Gather.town
+                    </h3>
+                </a>
 
-            <a href="#" class="ToolItem" target="_blank" rel="noopener">
+                <a href="#" class="ToolItem" target="_blank" rel="noopener">
                     <span class="material-icons-round tool-icon tool-icon-vacant">
                         emoji_emotions
                     </span>
-                <h3 class="tool-title">
-                    Coming Soon
-                </h3>
-            </a>
+                    <h3 class="tool-title">
+                        Coming Soon
+                    </h3>
+                </a>
 
-            <a href="#" class="ToolItem" target="_blank" rel="noopener">
+                <a href="#" class="ToolItem" target="_blank" rel="noopener">
                     <span class="material-icons-round tool-icon tool-icon-vacant">
                         emoji_emotions
                     </span>
-                <h3 class="tool-title">
-                    Coming Soon
-                </h3>
-            </a>
+                    <h3 class="tool-title">
+                        Coming Soon
+                    </h3>
+                </a>
 
-            <!--     画像をアイコンにするパターン       -->
-            <a href="#" class="ToolItem" target="_blank" rel="noopener">
+                <!--     画像をアイコンにするパターン       -->
+                <a href="#" class="ToolItem" target="_blank" rel="noopener">
                     <span class="material-icons-round tool-icon">
                         <img src="img/ringfit.png" alt="ringfit" class="tool-icon-ringfit">
                     </span>
-                <h3 class="tool-title">
-                    Img test
-                </h3>
-            </a>
+                    <h3 class="tool-title">
+                        Img test
+                    </h3>
+                </a>
 
-            <!--    Font Awesome からアイコンを持ってくる        -->
-            <a href="#" class="ToolItem" target="_blank" rel="noopener">
-                <i class="fab fa-twitter tool-icon tool-icon-twitter"></i>
-                <h3 class="tool-title">
-                    Icon test
-                </h3>
-            </a>
+                <!--    Font Awesome からアイコンを持ってくる        -->
+                <a href="#" class="ToolItem" target="_blank" rel="noopener">
+                    <i class="fab fa-twitter tool-icon tool-icon-twitter"></i>
+                    <h3 class="tool-title">
+                        Icon test
+                    </h3>
+                </a>
 
-            <!--     Google Fonts からアイコンをもらってくるパターン       -->
-            <!-- <a href="https://docs.google.com/spreadsheets/d/1b9uZVCDPsLLfcfsDZpeEeMRnr1GvbUPo2q4G4EH012o/edit"
+                <!--     Google Fonts からアイコンをもらってくるパターン       -->
+                <!-- <a href="https://docs.google.com/spreadsheets/d/1b9uZVCDPsLLfcfsDZpeEeMRnr1GvbUPo2q4G4EH012o/edit"
            class="ToolItem" target="_blank" rel="noopener">
         <span class="material-icons-round tool-icon tool-icon-millionEffort">
             edit
@@ -359,52 +259,26 @@
             </h3>
         </a> -->
 
+            </div>
+
         </div>
 
+        <!-- 左側 -->
+        <a href="news_inc.html" id="news" target="_blank" rel="noopener">
+            <h1>
+                News
+            </h1>
+            <!-- news_inc.html の内容を表示 -->
+            <iframe src="news_inc.html" class="news-content"></iframe>
+            <p class="wf-notosansjapanese">
+                もっと見る
+            </p>
+        </a>
     </div>
 
-    <!-- 左側 -->
-    <a href="news_inc.html" id="news" target="_blank" rel="noopener">
-        <h1>
-            News
-        </h1>
-        <!-- news_inc.html の内容を表示 -->
-        <iframe src="news_inc.html" class="news-content"></iframe>
-        <p class="wf-notosansjapanese">
-            もっと見る
-        </p>
-    </a>
-</div>
-
-<!--  Footer  -->
-<footer id="topFooter" class="footer outer-block">
-    <ul class="nav">
-        <li>
-            <a href="https://twitter.com/__marufura__" target="_blank" rel="noopener">
-                <i class="fab fa-twitter"></i>
-                <br>
-                @__marufura__
-            </a>
-        </li>
-        <li>
-            <a href="https://github.com/marufura" target="_blank" rel="noopener">
-                <i class="fab fa-github"></i>
-                <br>
-                marufura
-            </a>
-        </li>
-        <li>
-            <div>
-                <i class="far fa-envelope"></i>
-                <br>
-                <u>tara.for.using.services@gmail.com</u>
-            </div>
-        </li>
-    </ul>
-    <div class="concept">
-        <a href="#title">Back to main page</a>
+    <div id="footer">
+        <div id="footer"></div>
     </div>
-</footer>
 
 </body>
 
