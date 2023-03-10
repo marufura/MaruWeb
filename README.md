@@ -1,3 +1,4 @@
 # MaruWeb
 
-Github Pages で表示しています、ありがたや
+hugo を用いたものに移行しました。
+遺産。
